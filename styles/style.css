@@ -157,7 +157,7 @@ main {
 }
 
 .main__nav a {
-
+    border-bottom: 0;
     border-radius: 6px;
     text-align: start;
     color: #7E7E82;
@@ -166,12 +166,13 @@ main {
     outline: 2px solid #b8ffec;
     white-space: nowrap;
     text-decoration: none;
+    background-color: #fff0;
 }
 
 .main__nav a:active,
 .main__nav a:focus {
     outline: 2px solid #B8FFEC;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .read-more-checker {
