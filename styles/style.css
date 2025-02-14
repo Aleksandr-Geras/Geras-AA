@@ -223,7 +223,7 @@ label>.header__menu-burger-button {
 }
 
 #search {
-    background: url(/search/search.svg);
+    background-image: url(../search/search.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -247,17 +247,17 @@ label>.header__menu-burger-button {
 }
 
 #call {
-    background-image: url(/ic-call/call.svg);
+    background-image: url(../ic-call/call.svg);
     margin-right: 16px;
 }
 
 #chat {
-    background-image: url(/ic-chat/chat.svg);
+    background-image: url(../ic-chat/chat.svg);
     margin-right: 16px;
 }
 
 #profile {
-    background-image: url(/ic-profile/profile.svg);
+    background-image: url(../ic-profile/profile.svg);
 }
 
 .drop-menu__email,
