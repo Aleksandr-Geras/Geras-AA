@@ -37,16 +37,266 @@ body {
     align-items: center;
 }
 
-.header__menu-burger {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: 16px;
+/*кнопка бургера*/
+.menu-btn a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    position: relative;
 }
+
+.header__menu-burger-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}
+
+#menuBurg {
+    display: none;
+}
+
+label>.header__menu-burger-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    line-height: 40px;
+}
+
+.burger-line-1 {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s all;
+    z-index: 3;
+}
+
+.burger-line-2 {
+    position: absolute;
+    top: 19px;
+    left: 11px;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s all;
+    z-index: 3;
+}
+
+.burger-line-3 {
+    position: absolute;
+    top: 26px;
+    left: 11px;
+    width: 14px;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s all;
+    z-index: 3;
+}
+
+#menuBurg:checked~.header__menu_drop-menu {
+    max-height: 1024px;
+}
+
+#menuBurg:checked~.burger-line-1 {
+    transform: translateY(7px) translateX(-2px) rotate(45deg);
+    width: 21.73px;
+    height: 2.17px;
+}
+
+#menuBurg:checked~.burger-line-2 {
+    display: none;
+}
+
+
+#menuBurg:checked~.burger-line-3 {
+    transform: translateY(-7px) translateX(-2px) rotate(-45deg);
+    Width: 21.73px;
+    height: 2.17px;
+}
+
+/*
+.menu-btn #menuBurg {
+    z-index: 3;
+    margin-top: -15px;
+}
+
+#menuBurg span {
+    position: absolute;
+    content: '';
+    display: block;
+    border-radius: 1px;
+    background-color: #fff;
+    width: 18px;
+    height: 2px;
+    left: 50%;
+    margin-left: -9px;
+    margin-top: -8px;
+}
+
+#menuBurg span:nth-child(1) {
+    top: 50%;
+    opacity: 1;
+    width: 18px;
+    height: 2px;
+}
+
+#menuBurg span:nth-child(2) {
+    top: 70%;
+    opacity: 1;
+    width: 10px;
+}
+
+#menuBurg span:nth-child(3) {
+    top: 90%;
+    opacity: 1;
+    width: 14px;
+}
+
+*/
+
+/* дроп меню*/
+
+
+.header__menu_drop-menu {
+    display: block;
+    position: absolute;
+    left: -16px;
+    top: -24px;
+    width: 320px;
+    background-color: #fff;
+    box-shadow: 16px 0px 24px -13px rgba(34, 60, 80, 0.18);
+    overflow: hidden;
+    max-height: 0;
+    text-align: start;
+    transition: .5s all;
+
+}
+
+
+
+.drop-menu__list {
+    list-style: none;
+    margin-top: 120px;
+}
+
+.drop-menu__list>li {
+    position: relative;
+    margin-bottom: 32px;
+
+}
+
+.drop-menu__list a {
+    text-decoration: none;
+    color: #1b1c21;
+    padding: 5px;
+    margin-left: -24px;
+}
+
+.drop-menu__list a:focus {
+    background: url(/highlight/highlight.svg) no-repeat;
+    background-position: left;
+    opacity: 0.5;
+}
+
+.drop-menu__list a:hover {
+    color: #7E7E82;
+
+}
+
+.drop-menu__search-btn {
+    position: absolute;
+    transform: translateX(256px) translateY(23px);
+
+}
+
+#search {
+    background: url(/search/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*ПОДВАЛ - footer drop menu*/
+.drop-menu__footer {
+    display: block;
+    font-family: "TT Lakes";
+    margin-left: 24px;
+    margin-top: 268px;
+}
+
+.drop-menu__footer a {
+    display: block;
+    text-decoration: none;
+    color: #1b1c21;
+}
+
+.footer__button-conainer {
+    display: flex;
+}
+
+#call {
+    background-image: url(/ic-call/call.svg);
+    margin-right: 16px;
+}
+
+#chat {
+    background-image: url(/ic-chat/chat.svg);
+    margin-right: 16px;
+}
+
+#profile {
+    background-image: url(/ic-profile/profile.svg);
+}
+
+.drop-menu__email,
+.drop-menu__phone {
+    margin-top: 16px;
+}
+
+.drop-menu__email {
+    font-size: 16px;
+}
+
+.drop-menu__phone {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer__lang-box {
+    display: flex;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.footer__lang-box a {
+    margin-right: 7px;
+}
+
+.footer__lang-box a:hover {
+    opacity: 50%;
+}
+
+
+/*конец дроп меню*/
+
 
 .header__menu-logo {
     margin-top: 18.59px;
     margin-bottom: 18.59px;
-    margin-left: 16.73px;
+    margin-left: 17px;
+    z-index: 3;
 }
 
 .header__menu_container_button-hr {
