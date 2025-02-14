@@ -206,8 +206,8 @@ label>.header__menu-burger-button {
 }
 
 .drop-menu__list a:focus {
-    background: url(/highlight/highlight.svg) no-repeat;
-    background-position: left;
+    background-image: url(../highlight/highlight.png) no-repeat;
+    background-position: center;
     opacity: 0.5;
 }
 
