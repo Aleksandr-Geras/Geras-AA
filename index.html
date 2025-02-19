@@ -15,47 +15,47 @@
       <nav class="header__menu">
         <div class="header__menu_container_burger-logo-hr">
           <div class="header__menu-burger-button">
-            <input type="checkbox" id="menuBurg">
-            <label for="menuBurg">
-              <div class="header__menu-burger-button"></div>
-            </label>
+
+            <input type="checkbox" class="menuBurg" id="menuBurg">
+            <label for="menuBurg" class="burger"></label>
             <span class="burger-line-1"> </span>
             <span class="burger-line-2"> </span>
             <span class="burger-line-3"> </span>
-
-
-            <div class="header__menu_drop-menu">
-              <div class="drop-menu__search-btn menu-btn">
-                <a href="#" id="search"></a>
+          </div>
+          <aside class="header__menu_drop-menu">
+            <div class="drop-menu__search-btn menu-btn">
+              <a href="#" id="search"></a>
+            </div>
+            <ul class="drop-menu__list main__button_text">
+              <li><a href="#">Ремонт техники</a></li>
+              <li><a href="#">Услуги и сервисы</a></li>
+              <li><a href="#">Корпоративным клиентам</a></li>
+              <li><a href="#">Продавцам техники</a></li>
+              <li><a href="#">Партнерам</a></li>
+              <li><a href="#">Производителям</a></li>
+              <li><a href="#">Наши сервисные центры</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <div class="drop-menu__footer">
+              <div class="footer__button-conainer menu-btn">
+                <a href="#" title="Позвонить" class="header__menu-call" id="call"></a>
+                <a href="#" title="Чат" class="header__menu-chat" id="chat"></a>
+                <a href="#" title="header__menu-profile" id="profile"></a>
               </div>
-              <ul class="drop-menu__list main__button_text">
-                <li><a href="#">Ремонт техники</a></li>
-                <li><a href="#">Услуги и сервисы</a></li>
-                <li><a href="#">Корпоративным клиентам</a></li>
-                <li><a href="#">Продавцам техники</a></li>
-                <li><a href="#">Партнерам</a></li>
-                <li><a href="#">Производителям</a></li>
-                <li><a href="#">Наши сервисные центры</a></li>
-                <li><a href="#">Контакты</a></li>
-              </ul>
-              <div class="drop-menu__footer">
-                <div class="footer__button-conainer menu-btn">
-                  <a href="#" title="Позвонить" class="header__menu-call" id="call"></a>
-                  <a href="#" title="Чат" class="header__menu-chat" id="chat"></a>
-                  <a href="#" title="header__menu-profile" id="profile"></a>
-                </div>
-                <a href="#" title="Почта" class="drop-menu__email" id="">mail@cps.com</a>
-                <a href="#" title="Телефон" class="drop-menu__phone" id="">8 800 890 8900</a>
-                <div class="footer__lang-box">
-                  <a href="#" title="Русский" id="ru">RU</a>
-                  <a href="#" title="Английский" id="en">EN</a>
-                  <a href="#" title="Китайский" id="ch">CH</a>
-                </div>
+              <a href="#" title="Почта" class="drop-menu__email">mail@cps.com</a>
+              <a href="#" title="Телефон" class="drop-menu__phone">8 800 890 8900</a>
+              <div class="footer__lang-box">
+                <a href="#" title="Русский" id="ru">RU</a>
+                <a href="#" title="Английский" id="en">EN</a>
+                <a href="#" title="Китайский" id="ch">CH</a>
               </div>
             </div>
-          </div>
+
+          </aside>
+
+
           <hr class="header__menu_hr-second">
-          <a href="#" class="header__menu-logo" id="">
+          <a href="#" class="header__menu-logo">
             <img src="logo/Group.png" alt=""> </a>
         </div>
         <div class="header__menu_container_button-hr">
@@ -90,12 +90,13 @@
       <div class="main__header_button_container">
         <a href="#" title="Кнопка" class="main__header_container-repair" id="repair">
           <div class="main__header_a_text">Оставить заявку</div>
-          <!--<img class="main__header_img" src="ic-repair/repair.svg">-->
-          <a href="#" title="Поиск" class="main__header_container-checkstatus">
-            <div class="main__header_a_text">Статус ремонта</div>
-            <img class="main__header_img" src="ic-checkstatus/checkstatus.png">
-          </a>
         </a>
+        <!--<img class="main__header_img" src="ic-repair/repair.svg">-->
+        <a href="#" title="Поиск" class="main__header_container-checkstatus">
+          <div class="main__header_a_text">Статус ремонта</div>
+          <img class="main__header_img" src="ic-checkstatus/checkstatus.png" alt="">
+        </a>
+
       </div>
     </header>
 
@@ -130,21 +131,21 @@
         <p class="main__p_text ">
           Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать
           свой
-          ноутбук Dell с официальной гарантией производителя.
+          ноутбук Dell с официальной гарантией производителя.</p>
         <p class="main__p_text text"> Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
           что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по
           рекомендациям и, в свою очередь, советуют нас
           родным и близким.</p>
-        </p>
+
 
         <label for="read-more-checker" class="read-more-button">
 
-          <span href="#" class="main__button-expand" id="expand"></span>
+          <span class="main__button-expand" id="expand"></span>
           <span class="main__button-text"> Читать далее </span>
         </label>
       </div>
       <div class="main__img">
-        <img src="img/Picture Copy.jpg.jpg" alt="Картинка">
+        <img src="img/PictureCopy.jpg.jpg" alt="Картинка">
       </div>
     </div>
 
