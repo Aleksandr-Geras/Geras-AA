@@ -5,7 +5,10 @@ html {
 body {
     min-width: 320px;
     background-color: #f8f8f8;
-    overflow-x: hidden;
+    overflow: auto;
+    max-height: 597px;
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -28,13 +31,14 @@ body {
 }
 
 .header__container {
-    padding-left: 16px;
+    padding-left: 10px;
     padding-right: 16px;
 }
 
 .header__menu_container_burger-logo-hr {
     display: flex;
     align-items: center;
+
 }
 
 /*кнопка бургера*/
@@ -55,14 +59,25 @@ body {
     border-radius: 50%;
     position: relative;
     text-align: center;
-    z-index: 3;
 }
 
+.header_menu-burger-button__container {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+/*спрятал галочку*/
 #menuBurg {
-    display: none;
+    opacity: 0;
 }
 
-label>.header__menu-burger-button {
+.header_menu-burger-button__container > .burger {
     display: block;
     position: absolute;
     top: 0;
@@ -106,95 +121,62 @@ label>.header__menu-burger-button {
     z-index: 3;
 }
 
-#menuBurg:checked~.header__menu_drop-menu {
-    max-height: 1024px;
+.header__menu_container_burger-logo-hr:has(#menuBurg:checked) .header__menu_drop-menu {
+    transform: translateY(0);
 }
 
-#menuBurg:checked~.burger-line-1 {
+.header_menu-burger-button__container:has(#menuBurg:checked) .burger-line-1 {
     transform: translateY(7px) translateX(-2px) rotate(45deg);
     width: 21.73px;
     height: 2.17px;
 }
 
-#menuBurg:checked~.burger-line-2 {
+.header_menu-burger-button__container:has(#menuBurg:checked) .burger-line-2 {
     display: none;
 }
 
 
-#menuBurg:checked~.burger-line-3 {
+.header_menu-burger-button__container:has(#menuBurg:checked) .burger-line-3 {
     transform: translateY(-7px) translateX(-2px) rotate(-45deg);
     Width: 21.73px;
     height: 2.17px;
 }
 
-/*
-.menu-btn #menuBurg {
-    z-index: 3;
-    margin-top: -15px;
-}
 
-#menuBurg span {
-    position: absolute;
-    content: '';
-    display: block;
-    border-radius: 1px;
-    background-color: #fff;
-    width: 18px;
-    height: 2px;
-    left: 50%;
-    margin-left: -9px;
-    margin-top: -8px;
-}
-
-#menuBurg span:nth-child(1) {
-    top: 50%;
-    opacity: 1;
-    width: 18px;
-    height: 2px;
-}
-
-#menuBurg span:nth-child(2) {
-    top: 70%;
-    opacity: 1;
-    width: 10px;
-}
-
-#menuBurg span:nth-child(3) {
-    top: 90%;
-    opacity: 1;
-    width: 14px;
-}
-
-*/
 
 /* дроп меню*/
 
 
-.header__menu_drop-menu {
-    display: block;
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: absolute;
-    left: -16px;
-    top: -24px;
+    left: -10px;
+    top: 0;
     width: 320px;
     background-color: #fff;
     box-shadow: 16px 0px 24px -13px rgba(34, 60, 80, 0.18);
-    overflow: hidden;
-    max-height: 0;
+    overflow: auto;
+    transform: translateY(-100%);
     text-align: start;
     transition: .5s all;
-
+    height: 100vh;
+    padding: 24px;
+    z-index: 5;
 }
 
-
-
 .drop-menu__list {
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    margin-top: 120px;
+    flex-grow: 2;
+    padding: 0;
+    gap: 32px;
 }
 
 .drop-menu__list>li {
     position: relative;
-    margin-bottom: 32px;
 
 }
 
@@ -202,24 +184,28 @@ label>.header__menu-burger-button {
     text-decoration: none;
     color: #1b1c21;
     padding: 5px;
-    margin-left: -24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "TT Lakes";
 }
 
 .drop-menu__list a:focus {
     background-image: url(../highlight/highlight.png) no-repeat;
     background-position: center;
     opacity: 0.5;
+    transition: 0.5s all;
 }
 
 .drop-menu__list a:hover {
     color: #7E7E82;
+    transition: 0.5s all;
 
 }
 
 .drop-menu__search-btn {
-    position: absolute;
-    transform: translateX(256px) translateY(23px);
-
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
 }
 
 #search {
@@ -232,8 +218,7 @@ label>.header__menu-burger-button {
 .drop-menu__footer {
     display: block;
     font-family: "TT Lakes";
-    margin-left: 24px;
-    margin-top: 268px;
+    flex-grow: 1;
 }
 
 .drop-menu__footer a {
@@ -296,7 +281,7 @@ label>.header__menu-burger-button {
     margin-top: 18.59px;
     margin-bottom: 18.59px;
     margin-left: 17px;
-    z-index: 3;
+    z-index: 10;
 }
 
 .header__menu_container_button-hr {
@@ -430,6 +415,7 @@ li {
     white-space: nowrap;
     text-decoration: none;
     background-color: #fff0;
+    list-style: none;
 }
 
 .main__nav a:active,
