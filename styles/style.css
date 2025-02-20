@@ -6,7 +6,6 @@ body {
     min-width: 320px;
     background-color: #f8f8f8;
     overflow: auto;
-    max-height: 597px;
     margin: 0;
     padding: 0;
 }
@@ -31,7 +30,7 @@ body {
 }
 
 .header__container {
-    padding-left: 10px;
+    padding-left: 16px;
     padding-right: 16px;
 }
 
@@ -49,6 +48,8 @@ body {
     background-color: rgba(255, 62, 121, 1);
     border-radius: 50%;
     position: relative;
+    z-index: 10;
+
 }
 
 .header__menu-burger-button {
@@ -77,7 +78,7 @@ body {
     opacity: 0;
 }
 
-.header_menu-burger-button__container > .burger {
+.header_menu-burger-button__container>.burger {
     display: block;
     position: absolute;
     top: 0;
@@ -88,6 +89,7 @@ body {
     line-height: 40px;
 }
 
+
 .burger-line-1 {
     position: absolute;
     top: 12px;
@@ -96,6 +98,7 @@ body {
     height: 2px;
     background-color: #fff;
     transition: .5s all;
+    cursor: pointer;
     z-index: 3;
 }
 
@@ -107,6 +110,7 @@ body {
     height: 2px;
     background-color: #fff;
     transition: .5s all;
+    cursor: pointer;
     z-index: 3;
 }
 
@@ -118,7 +122,9 @@ body {
     height: 2px;
     background-color: #fff;
     transition: .5s all;
+    cursor: pointer;
     z-index: 3;
+
 }
 
 .header__menu_container_burger-logo-hr:has(#menuBurg:checked) .header__menu_drop-menu {
@@ -142,8 +148,6 @@ body {
     height: 2.17px;
 }
 
-
-
 /* дроп меню*/
 
 
@@ -157,7 +161,6 @@ aside {
     width: 320px;
     background-color: #fff;
     box-shadow: 16px 0px 24px -13px rgba(34, 60, 80, 0.18);
-    overflow: auto;
     transform: translateY(-100%);
     text-align: start;
     transition: .5s all;
@@ -166,18 +169,20 @@ aside {
     z-index: 5;
 }
 
+
 .drop-menu__list {
     display: flex;
     flex-direction: column;
     list-style: none;
-    flex-grow: 2;
+    margin-top: 53px;
     padding: 0;
     gap: 32px;
+    overflow: auto;
 }
+
 
 .drop-menu__list>li {
     position: relative;
-
 }
 
 .drop-menu__list a {
@@ -340,6 +345,7 @@ aside {
     border: 0;
     border-radius: 1px;
     background-color: #eaeaea;
+    z-index: 10;
 }
 
 
@@ -368,6 +374,7 @@ main {
     background-color: #41F6D7;
     border: 0;
     border-radius: 0 10px 10px 0;
+    z-index: 10;
 }
 
 .main__header_text {
@@ -397,6 +404,7 @@ main {
 
 li {
     display: block;
+
 }
 
 .main__nav_text {
