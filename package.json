@@ -55,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/Aleksandr-Geras/Geras-AA/issues"
   },
-  "homepage": "https://github.com/Aleksandr-Geras/Geras-AA#readme"
+  "homepage": "https://github.com/Aleksandr-Geras/Geras-AA#readme",
+  "dependencies": {
+    "swiper": "^11.2.8"
+  }
 }
