@@ -8,7 +8,6 @@ let windowWidth = window.innerWidth;
 
 function mobileSlider() {
   if (windowWidth <= 400 && slider.dataset.mobile == 'false') {
-    // eslint-disable-next-line no-undef
     mySwiper = new Swiper(slider, {
       modules: [Navigation, Pagination],
       slideClass: 'image-slider__slide',
