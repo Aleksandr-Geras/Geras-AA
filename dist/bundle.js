@@ -14173,41 +14173,6 @@ function Mousewheel(_ref) {
 
 /***/ }),
 
-/***/ "./node_modules/swiper/modules/navigation.css":
-/*!****************************************************!*\
-  !*** ./node_modules/swiper/modules/navigation.css ***!
-  \****************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-    if(true) {
-      (function() {
-        var localsJsonString = undefined;
-        // 1748081037913
-        var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
-        // only invalidate when locals change
-        if (
-          module.hot.data &&
-          module.hot.data.value &&
-          module.hot.data.value !== localsJsonString
-        ) {
-          module.hot.invalidate();
-        } else {
-          module.hot.accept();
-        }
-        module.hot.dispose(function(data) {
-          data.value = localsJsonString;
-          cssReload();
-        });
-      })();
-    }
-  
-
-/***/ }),
-
 /***/ "./node_modules/swiper/modules/navigation.mjs":
 /*!****************************************************!*\
   !*** ./node_modules/swiper/modules/navigation.mjs ***!
@@ -14425,10 +14390,10 @@ function Navigation(_ref) {
 
 /***/ }),
 
-/***/ "./node_modules/swiper/modules/pagination.css":
-/*!****************************************************!*\
-  !*** ./node_modules/swiper/modules/pagination.css ***!
-  \****************************************************/
+/***/ "./node_modules/swiper/modules/navigation.scss":
+/*!*****************************************************!*\
+  !*** ./node_modules/swiper/modules/navigation.scss ***!
+  \*****************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -14438,7 +14403,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1748081037920
+        // 1749481796335
         var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -14935,6 +14900,41 @@ function Pagination(_ref) {
 
 
 
+
+/***/ }),
+
+/***/ "./node_modules/swiper/modules/pagination.scss":
+/*!*****************************************************!*\
+  !*** ./node_modules/swiper/modules/pagination.scss ***!
+  \*****************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+    if(true) {
+      (function() {
+        var localsJsonString = undefined;
+        // 1749481796353
+        var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
+        // only invalidate when locals change
+        if (
+          module.hot.data &&
+          module.hot.data.value &&
+          module.hot.data.value !== localsJsonString
+        ) {
+          module.hot.invalidate();
+        } else {
+          module.hot.accept();
+        }
+        module.hot.dispose(function(data) {
+          data.value = localsJsonString;
+          cssReload();
+        });
+      })();
+    }
+  
 
 /***/ }),
 
@@ -21516,41 +21516,6 @@ function setInnerHTML(el, html) {
 
 /***/ }),
 
-/***/ "./node_modules/swiper/swiper.css":
-/*!****************************************!*\
-  !*** ./node_modules/swiper/swiper.css ***!
-  \****************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-    if(true) {
-      (function() {
-        var localsJsonString = undefined;
-        // 1748081037896
-        var cssReload = __webpack_require__(/*! ../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
-        // only invalidate when locals change
-        if (
-          module.hot.data &&
-          module.hot.data.value &&
-          module.hot.data.value !== localsJsonString
-        ) {
-          module.hot.invalidate();
-        } else {
-          module.hot.accept();
-        }
-        module.hot.dispose(function(data) {
-          data.value = localsJsonString;
-          cssReload();
-        });
-      })();
-    }
-  
-
-/***/ }),
-
 /***/ "./node_modules/swiper/swiper.mjs":
 /*!****************************************!*\
   !*** ./node_modules/swiper/swiper.mjs ***!
@@ -21578,6 +21543,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "./node_modules/swiper/swiper.scss":
+/*!*****************************************!*\
+  !*** ./node_modules/swiper/swiper.scss ***!
+  \*****************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+    if(true) {
+      (function() {
+        var localsJsonString = undefined;
+        // 1749481796371
+        var cssReload = __webpack_require__(/*! ../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
+        // only invalidate when locals change
+        if (
+          module.hot.data &&
+          module.hot.data.value &&
+          module.hot.data.value !== localsJsonString
+        ) {
+          module.hot.invalidate();
+        } else {
+          module.hot.accept();
+        }
+        module.hot.dispose(function(data) {
+          data.value = localsJsonString;
+          cssReload();
+        });
+      })();
+    }
+  
 
 /***/ }),
 
@@ -24277,10 +24277,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _onlyjs_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./onlyjs/script.js */ "./src/onlyjs/script.js");
 /* harmony import */ var _onlyjs_script_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_onlyjs_script_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _onlyjs_swiper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./onlyjs/swiper.js */ "./src/onlyjs/swiper.js");
-/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
-/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
-/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
+/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.scss */ "./src/styles/style.scss");
+/* harmony import */ var swiper_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/scss */ "./node_modules/swiper/swiper.scss");
+/* harmony import */ var swiper_scss_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/scss/navigation */ "./node_modules/swiper/modules/navigation.scss");
+/* harmony import */ var swiper_scss_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/scss/pagination */ "./node_modules/swiper/modules/pagination.scss");
 
 
 
@@ -24341,7 +24341,6 @@ let windowWidth = window.innerWidth;
 
 function mobileSlider() {
   if (windowWidth <= 400 && slider.dataset.mobile == 'false') {
-    // eslint-disable-next-line no-undef
     mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
       slideClass: 'image-slider__slide',
@@ -24379,10 +24378,10 @@ window.addEventListener('resize', function () {
 
 /***/ }),
 
-/***/ "./src/styles/style.css":
-/*!******************************!*\
-  !*** ./src/styles/style.css ***!
-  \******************************/
+/***/ "./src/styles/style.scss":
+/*!*******************************!*\
+  !*** ./src/styles/style.scss ***!
+  \*******************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -24392,7 +24391,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1748081039059
+        // 1749481796558
         var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -24502,7 +24501,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("07968296f386043c0704")
+/******/ 		__webpack_require__.h = () => ("fb61989bd92d3192f48a")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

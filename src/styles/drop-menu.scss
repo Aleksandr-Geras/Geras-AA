@@ -1,0 +1,131 @@
+/* дроп меню*/
+
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 320px;
+    background-color: #fff;
+    box-shadow: 16px 0px 24px -13px rgba(34, 60, 80, 0.18);
+    transform: translateY(-100%);
+    text-align: start;
+    transition: .5s all;
+    height: 100vh;
+    padding: 24px;
+    z-index: 5;
+}
+
+
+.drop-menu__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 53px;
+    padding: 0;
+    gap: 32px;
+    overflow: auto;
+}
+
+
+.drop-menu__list>li {
+    position: relative;
+}
+
+.drop-menu__list a {
+    text-decoration: none;
+    color: #1b1c21;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'MyFont', sans-serif;
+}
+
+.drop-menu__list a:focus {
+    background-image: url(../img/arrows/highlight.png) no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    transition: 0.5s all;
+}
+
+.drop-menu__list a:hover {
+    color: #7E7E82;
+    transition: 0.5s all;
+
+}
+
+.drop-menu__search-btn {
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+}
+
+#search {
+    background-image: url(../img/icon/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*ПОДВАЛ - footer drop menu*/
+.drop-menu__footer {
+    display: block;
+    font-family: 'MyFont', sans-serif;
+    flex-grow: 1;
+}
+
+.drop-menu__footer a {
+    display: block;
+    text-decoration: none;
+    color: #1b1c21;
+}
+
+.footer__button-conainer {
+    display: flex;
+}
+
+#call {
+    background-image: url(../img/icon/call.svg);
+    margin-right: 16px;
+}
+
+#chat {
+    background-image: url(../img/icon/chat.svg);
+    margin-right: 16px;
+}
+
+#profile {
+    background-image: url(../img/icon/profile.svg);
+}
+
+.drop-menu__email,
+.drop-menu__phone {
+    margin-top: 16px;
+}
+
+.drop-menu__email {
+    font-size: 16px;
+}
+
+.drop-menu__phone {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer__lang-box {
+    display: flex;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.footer__lang-box a {
+    margin-right: 7px;
+}
+
+.footer__lang-box a:hover {
+    opacity: 50%;
+}
+
+// конец дроп меню

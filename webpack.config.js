@@ -47,7 +47,7 @@ module.exports = {
       },
       //Компилирую Sacss
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       //обработка HTML (чтобы Webpack видел <img src="...">)
@@ -103,7 +103,7 @@ module.exports = {
     }),
     // Кладу стили в отдельный файлик
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: '[name].[contenthash].css',
     }),
     // Копирую картинки
     new CopyPlugin({
