@@ -6,7 +6,6 @@
     font-size: 16px;
     color: #7E7E82;
     padding: 16px;
-    margin-bottom: 32px;
 }
 
 .gradient {
@@ -20,8 +19,8 @@
     display: none;
 }
 
-.swiper-container {
-    width: 512px;
+.swiper-container, .swiper_second {
+    width: 830px;
     padding-left: 32px !important;
     overflow: hidden;
 
@@ -45,7 +44,7 @@
     background-color: rgb(255, 255, 255);
     flex-shrink: 0;
     align-items: center;
-    margin: 0 32px 16px 0;
+    margin: 16px 32px 16px 0;
 }
 
 .slide a {
@@ -91,5 +90,36 @@
 
 .swiper-pagination-bullet-active {
     --swiper-theme-color: #757575;
+
+}
+
+
+
+.slide__second {
+  width: 240px;
+  height: 160px;
+  margin-bottom: 16px;
+  display: flex;
+  overflow: auto;
+}
+
+.slide__second a {
+  align-items: normal;
+  text-decoration: none;
+}
+
+.slide__second .slide__btn {
+  bottom: -100px;
+}
+
+.slide__txt {
+  margin-left: 16px;
+  margin-top: 16px;
+  height: 24px;
+  font-weight: 600;
+  font-family: 'MyFont', sans-serif;
+  color: #1B1C21;
+  line-height: 24px;
+  font-size: 16px;
 
 }
