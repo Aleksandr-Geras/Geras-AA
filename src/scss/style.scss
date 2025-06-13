@@ -1,26 +1,26 @@
 // @import "fonts.css";
-@use '../styles/variables.scss';
-@use '../styles/buttons.scss';
-@use '../styles/brands.scss';
-@use '../styles/body.scss';
-@use '../styles/header.scss';
-@use '../styles/drop-menu.scss';
-@use '../styles/fonts.scss';
+@use './variables.scss';
+@use './buttons.scss';
+@use './brands.scss';
+@use './body.scss';
+@use './header.scss';
+@use './drop-menu.scss';
+@use './fonts.scss';
 
 
-@use '../styles/swiper.scss';
+@use './swiper.scss';
 
-@use '../styles/media.scss';
-
-
-
+@use './media.scss';
 
 
 
 
 
 
-/* Вдруг что-то пригодится 
+
+
+
+/* Вдруг что-то пригодится
 /* Новая кнопка показать/скрыть */
 /* .load-more_ckb {
     display: none;

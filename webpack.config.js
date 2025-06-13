@@ -52,7 +52,14 @@ module.exports = {
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
           'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          {
+            loader: 'sass-loader', // compiles Sass to CSS, using Node Sass by default
+            options: {
+              sassOptions: {
+                includePaths: [path.resolve(__dirname, 'src/scss')],
+              },
+            },
+          },
         ],
       },
       //обработка HTML (чтобы Webpack видел <img src="...">)
