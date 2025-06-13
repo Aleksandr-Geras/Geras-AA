@@ -100,7 +100,7 @@ module.exports = {
     //Подключаем файл html, стили и скрипты встроятся автоматически
     new HTMLWebpackPlugin({
       template: './src/index.html',
-      inject: 'body',
+      inject: true,
       filename: 'index.html',
       minify: {
         collapseWhitespace: false,
