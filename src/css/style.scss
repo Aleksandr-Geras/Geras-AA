@@ -1,16 +1,13 @@
 // @import "fonts.css";
-@use './_variables.scss';
-@use './buttons.scss';
-@use './brands.scss';
-@use './body.scss';
-@use './header.scss';
-@use './drop-menu.scss';
-@use './fonts.scss';
-
-
-@use './swiper.scss';
-
-@use './media.scss';
+@use '../scss/variables';
+@use '../scss/buttons.scss';
+@use '../scss/brands.scss';
+@use '../scss/body.scss';
+@use '../scss/header.scss';
+@use '../scss/drop-menu.scss';
+@use '../scss/fonts.scss';
+@use '../scss/swiper.scss';
+@use '../scss/media.scss';
 
 
 
