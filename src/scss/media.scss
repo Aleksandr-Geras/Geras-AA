@@ -106,15 +106,15 @@
         margin-right: 25px;
     }
 
-.swiper-container {
+    .swiper-container {
         width: 100%;
     }
 
 
     .swiper__second {
       display: flex;
-      overflow: auto;
-
+      overflow: hidden;
+      width: 100%;
     }
     /* .slide__txt {
     display: flex;
