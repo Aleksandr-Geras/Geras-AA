@@ -29,7 +29,7 @@ module.exports = {
   module: {
     rules: [
       //Подключение css
-      {
+      /* {
         test: /\.css$/i,
         use: [
           {
@@ -44,24 +44,26 @@ module.exports = {
             },
           },
         ],
-      },
+      }, */
       //Компилирую Sacss
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
           'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
+
           {
             loader: 'sass-loader', // compiles Sass to CSS, using Node Sass by default
             options: {
               sassOptions: {
-                includePaths: [path.resolve(__dirname, 'src/scss')],
+                includePaths: [path.resolve(__dirname, 'src/styles')],
               },
             },
           },
         ],
       },
+
       //обработка HTML (чтобы Webpack видел <img src="...">)
       {
         test: /\.html$/,
@@ -115,7 +117,7 @@ module.exports = {
     }),
     // Кладу стили в отдельный файлик
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: 'style.css',
     }),
     // Копирую картинки
     new CopyPlugin({
