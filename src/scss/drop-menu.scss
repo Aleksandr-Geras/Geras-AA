@@ -45,7 +45,7 @@ aside {
 }
 
 .drop-menu__list a:focus {
-    background-image: url(../img/arrows/highlight.png) no-repeat;
+    background-image: url(/src/img/arrows/highlight.png) no-repeat;
     background-position: center;
     opacity: 0.5;
     transition: 0.5s all;
@@ -64,7 +64,7 @@ aside {
 }
 
 #search {
-    background-image: url(../img/icon/search.svg);
+    background-image: url(/src/img/icon/search.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -87,17 +87,17 @@ aside {
 }
 
 #call {
-    background-image: url(../img/icon/call.svg);
+    background-image: url(/src/img/icon/call.svg);
     margin-right: 16px;
 }
 
 #chat {
-    background-image: url(../img/icon/chat.svg);
+    background-image: url(/src/img/icon/chat.svg);
     margin-right: 16px;
 }
 
 #profile {
-    background-image: url(../img/icon/profile.svg);
+    background-image: url(/src/img/icon/profile.svg);
 }
 
 .drop-menu__email,

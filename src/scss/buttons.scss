@@ -108,13 +108,13 @@
 
 
 #repair {
-    background-image: url(../img/icon/repair.svg);
+    background-image: url(/src/img/icon/repair.svg);
     background-repeat: no-repeat;
     background-position: right;
 
 }
 #checkstatus {
-    background-image: url(../img/icon/checkstatus.png);
+    background-image: url(/src/img/icon/checkstatus.png);
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -132,7 +132,7 @@
     margin-top: 24px;
     margin-bottom: 34px;
     margin-left: 24px;
-    background-image: url(../img/arrows/icon.svg);
+    background-image: url(/src/img/arrows/icon.svg);
     background-repeat: no-repeat;
     background-position: 15% 35%;
     background-color: inherit;
@@ -149,7 +149,7 @@
     margin-top: 24px;
     margin-left: 24px;
     margin-bottom: 34px;
-    background-image: url(../img/arrows/icon.svg);
+    background-image: url(/src/img/arrows/icon.svg);
     background-repeat: no-repeat;
     background-position: 15% 35%;
     background-color: inherit;
@@ -159,7 +159,7 @@
 }
 
 #expand {
-    background-image: url(../img/arrows/expand.svg);
+    background-image: url(/src/img/arrows/expand.svg);
     background-repeat: no-repeat;
     background-position: left;
 }
