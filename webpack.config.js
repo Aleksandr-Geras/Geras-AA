@@ -46,23 +46,55 @@ module.exports = {
         ],
       },
       //Компилирую Sacss
-      {
+      /* {
         test: /\.s[ac]ss$/,
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
           'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader',
-          /* {
+
+          {
             loader: 'sass-loader', // compiles Sass to CSS, using Node Sass by default
             options: {
               sassOptions: {
-                includePaths: [path.resolve(__dirname, 'src/scss')],
+                includePaths: [path.resolve(__dirname, 'src/styles')],
               },
             },
-          }, */
+          },
+        ],
+      }, */
+
+      // Предлагает ИИ
+
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 2, // Важно: указывает, сколько лоадеров обработают @import
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sassOptions: {
+                includePaths: ['src/styles'],
+              },
+            },
+          },
         ],
       },
+
       //обработка HTML (чтобы Webpack видел <img src="...">)
       {
         test: /\.html$/,
