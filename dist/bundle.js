@@ -14403,7 +14403,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1749884726943
+        // 1749976303473
         var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -14916,7 +14916,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1749884726986
+        // 1749976303479
         var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -21559,7 +21559,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1749884726870
+        // 1749976303306
         var cssReload = __webpack_require__(/*! ../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -24262,41 +24262,6 @@ module.exports.formatError = function (err) {
 
 /***/ }),
 
-/***/ "./src/css/style.scss":
-/*!****************************!*\
-  !*** ./src/css/style.scss ***!
-  \****************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-    if(true) {
-      (function() {
-        var localsJsonString = undefined;
-        // 1749884726911
-        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
-        // only invalidate when locals change
-        if (
-          module.hot.data &&
-          module.hot.data.value &&
-          module.hot.data.value !== localsJsonString
-        ) {
-          module.hot.invalidate();
-        } else {
-          module.hot.accept();
-        }
-        module.hot.dispose(function(data) {
-          data.value = localsJsonString;
-          cssReload();
-        });
-      })();
-    }
-  
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -24308,7 +24273,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _onlyjs_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./onlyjs/script.js */ "./src/onlyjs/script.js");
 /* harmony import */ var _onlyjs_script_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_onlyjs_script_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _onlyjs_swiper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./onlyjs/swiper.js */ "./src/onlyjs/swiper.js");
-/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/style.scss */ "./src/css/style.scss");
+/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/style.scss */ "./src/scss/style.scss");
 /* harmony import */ var swiper_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/scss */ "./node_modules/swiper/swiper.scss");
 /* harmony import */ var swiper_scss_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/scss/navigation */ "./node_modules/swiper/modules/navigation.scss");
 /* harmony import */ var swiper_scss_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/scss/pagination */ "./node_modules/swiper/modules/pagination.scss");
@@ -24347,13 +24312,12 @@ function showMore() {
     btnTxt.style.backgroundPosition = '-5%, 40%';
   }
 }
-document.getElementById('smBtn').addEventListener('click', showMore);
 
 function showMoreSecond() {
   const containerBrands = document.querySelector('.swiper_second');
   const btnTxt = document.querySelector('.show-more-btn-second');
-
-  if (containerBrands.style.height != String('')) {
+  const isExpanded = containerBrands.style.height === '170px';
+  if (isExpanded) {
     containerBrands.style.height = '';
     btnTxt.innerHTML = 'Скрыть';
 
@@ -24367,29 +24331,28 @@ function showMoreSecond() {
   }
 }
 
-document
-  .getElementById('smBtnSecond ')
-  .addEventListener('click', showMoreSecond);
+document.getElementById('smBtn').addEventListener('click', showMore);
 
-// предлагает ИИ
-/* function toggleSection(containerSelector, btnSelector, collapsedHeight) {
-  const container = document.querySelector(containerSelector);
-  const btn = document.querySelector(btnSelector);
-  const isCollapsed =
-    !container.style.height || container.style.height === collapsedHeight;
+document.getElementById('BtnSecond').addEventListener('click', showMoreSecond);
 
-  container.style.height = isCollapsed ? '' : collapsedHeight;
-  btn.textContent = isCollapsed ? 'Скрыть' : 'Показать все';
-  btn.style.backgroundImage = `url(../img/arrows/${isCollapsed ? 'icon' : 'expand'}.svg)`;
-}
+/* function showMoreSecond() {
+  const containerBrandsSecond = document.querySelector('.swiper_second');
+  const btnTxt = document.querySelector('.show-more-btn-second');
 
-document.getElementById('smBtn').addEventListener('click', () => {
-  toggleSection('.swiper-container', '.show-more-btn', '170px');
-});
-
-document.getElementById('smBtnSecond').addEventListener('click', () => {
-  toggleSection('.swiper_second', '.show-more-btn-second', '170px');
-}); */
+  if (containerBrandsSecond.classList.contains('expanded')) {
+    containerBrandsSecond.style.maxHeight = '';
+    btnTxt.textContent = 'Скрыть';
+    btnTxt.style.backgroundImage = 'url(../img/arrows/icon.svg)';
+    btnTxt.style.backgroundPosition = '15%, 35%';
+    containerBrandsSecond.classList.remove('expanded');
+  } else {
+    containerBrandsSecond.style.maxHeight = '350px';
+    btnTxt.textContent = 'Показать все';
+    btnTxt.style.backgroundImage = 'url(../img/arrows/expand.svg)';
+    btnTxt.style.backgroundPosition = '-5%, 40%';
+    containerBrandsSecond.classList.add('expanded');
+  }
+} */
 
 
 /***/ }),
@@ -24448,6 +24411,41 @@ window.addEventListener('resize', function () {
   mobileSlider();
 });
 
+
+/***/ }),
+
+/***/ "./src/scss/style.scss":
+/*!*****************************!*\
+  !*** ./src/scss/style.scss ***!
+  \*****************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+    if(true) {
+      (function() {
+        var localsJsonString = undefined;
+        // 1749977485222
+        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
+        // only invalidate when locals change
+        if (
+          module.hot.data &&
+          module.hot.data.value &&
+          module.hot.data.value !== localsJsonString
+        ) {
+          module.hot.invalidate();
+        } else {
+          module.hot.accept();
+        }
+        module.hot.dispose(function(data) {
+          data.value = localsJsonString;
+          cssReload();
+        });
+      })();
+    }
+  
 
 /***/ })
 
@@ -24539,7 +24537,7 @@ window.addEventListener('resize', function () {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "f04158b32847e29d0f40"; }
+/******/ 		__webpack_require__.h = function() { return "a43541e3652fcceccdb4"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

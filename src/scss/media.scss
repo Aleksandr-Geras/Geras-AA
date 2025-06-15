@@ -115,11 +115,12 @@
     }
 
 
-    .swiper__second {
-      display: flex;
-      overflow: hidden;
+    /* .swiper_second {
+      // display: flex;
+      // overflow: hidden;
       width: 100%;
-    }
+      // height: 100%;
+    } */
     /* .slide__txt {
     display: flex;
     margin-left: 16px;
@@ -129,6 +130,9 @@
     width: 100%;
     justify-content: space-between;
   }*/
+
+
+
 }
 
 @media (min-width:1119px) {

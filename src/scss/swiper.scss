@@ -20,11 +20,14 @@
 }
 
 .swiper-container, .swiper_second {
-    width: 830px;
+    // width: 830px;
     padding-left: 32px !important;
     overflow: hidden;
-
     position: relative;
+}
+.swiper_second {
+  transition: height 0.3s ease; /* Плавное изменение */
+  overflow: hidden; /* Чтобы содержимое не "выпадало" */
 }
 
 .swiper-wrapper {

@@ -1,6 +1,6 @@
 import './onlyjs/script.js';
 import './onlyjs/swiper.js';
-import './css/style.scss';
+import './scss/style.scss';
 
 // Импорт стилей (обязательно!)
 import 'swiper/scss';

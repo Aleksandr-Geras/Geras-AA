@@ -15,13 +15,12 @@ function showMore() {
     btnTxt.style.backgroundPosition = '-5%, 40%';
   }
 }
-document.getElementById('smBtn').addEventListener('click', showMore);
 
 function showMoreSecond() {
   const containerBrands = document.querySelector('.swiper_second');
   const btnTxt = document.querySelector('.show-more-btn-second');
-
-  if (containerBrands.style.height != String('')) {
+  const isExpanded = containerBrands.style.height === '170px';
+  if (isExpanded) {
     containerBrands.style.height = '';
     btnTxt.innerHTML = 'Скрыть';
 
@@ -35,26 +34,25 @@ function showMoreSecond() {
   }
 }
 
-document
-  .getElementById('smBtnSecond ')
-  .addEventListener('click', showMoreSecond);
+document.getElementById('smBtn').addEventListener('click', showMore);
 
-// предлагает ИИ
-/* function toggleSection(containerSelector, btnSelector, collapsedHeight) {
-  const container = document.querySelector(containerSelector);
-  const btn = document.querySelector(btnSelector);
-  const isCollapsed =
-    !container.style.height || container.style.height === collapsedHeight;
+document.getElementById('BtnSecond').addEventListener('click', showMoreSecond);
 
-  container.style.height = isCollapsed ? '' : collapsedHeight;
-  btn.textContent = isCollapsed ? 'Скрыть' : 'Показать все';
-  btn.style.backgroundImage = `url(../img/arrows/${isCollapsed ? 'icon' : 'expand'}.svg)`;
-}
+/* function showMoreSecond() {
+  const containerBrandsSecond = document.querySelector('.swiper_second');
+  const btnTxt = document.querySelector('.show-more-btn-second');
 
-document.getElementById('smBtn').addEventListener('click', () => {
-  toggleSection('.swiper-container', '.show-more-btn', '170px');
-});
-
-document.getElementById('smBtnSecond').addEventListener('click', () => {
-  toggleSection('.swiper_second', '.show-more-btn-second', '170px');
-}); */
+  if (containerBrandsSecond.classList.contains('expanded')) {
+    containerBrandsSecond.style.maxHeight = '';
+    btnTxt.textContent = 'Скрыть';
+    btnTxt.style.backgroundImage = 'url(../img/arrows/icon.svg)';
+    btnTxt.style.backgroundPosition = '15%, 35%';
+    containerBrandsSecond.classList.remove('expanded');
+  } else {
+    containerBrandsSecond.style.maxHeight = '350px';
+    btnTxt.textContent = 'Показать все';
+    btnTxt.style.backgroundImage = 'url(../img/arrows/expand.svg)';
+    btnTxt.style.backgroundPosition = '-5%, 40%';
+    containerBrandsSecond.classList.add('expanded');
+  }
+} */
