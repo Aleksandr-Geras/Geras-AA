@@ -29,7 +29,7 @@ module.exports = {
   module: {
     rules: [
       //Подключение css
-      {
+      /* {
         test: /\.css$/i,
         use: [
           {
@@ -44,9 +44,9 @@ module.exports = {
             },
           },
         ],
-      },
+      }, */
       //Компилирую Sacss
-      /* {
+      {
         test: /\.s[ac]ss$/,
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
@@ -58,37 +58,6 @@ module.exports = {
             options: {
               sassOptions: {
                 includePaths: [path.resolve(__dirname, 'src/styles')],
-              },
-            },
-          },
-        ],
-      }, */
-
-      // Предлагает ИИ
-
-      {
-        test: /\.s[ac]ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              importLoaders: 2, // Важно: указывает, сколько лоадеров обработают @import
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              sassOptions: {
-                includePaths: ['src/styles'],
               },
             },
           },
@@ -148,7 +117,7 @@ module.exports = {
     }),
     // Кладу стили в отдельный файлик
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: 'style.css',
     }),
     // Копирую картинки
     new CopyPlugin({
