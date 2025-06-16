@@ -3,7 +3,10 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
 let slider = document.querySelector('.image-slider');
+let sliderSecond = document.querySelector('.swiper_second');
 let mySwiper;
+// eslint-disable-next-line no-unused-vars
+let mySwiper_second;
 let windowWidth = window.innerWidth;
 
 function mobileSlider() {
@@ -12,7 +15,7 @@ function mobileSlider() {
       modules: [Navigation, Pagination],
       slideClass: 'image-slider__slide',
       speed: 400,
-      spaceBetween: 100,
+      // spaceBetween: 100,
 
       pagination: {
         el: '.swiper-pagination',
@@ -20,7 +23,24 @@ function mobileSlider() {
         clickable: true,
       },
 
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true,
+    });
+
+    mySwiper_second = new Swiper(sliderSecond, {
+      modules: [Navigation, Pagination],
+      slideClass: 'slide',
+      speed: 400,
+      // spaceBetween: 100,
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+
       slidesPerView: 1.3,
+      spaceBetween: 20,
       loop: true,
     });
 

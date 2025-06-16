@@ -8,15 +8,20 @@
     padding: 16px;
 }
 
-.gradient {
+.gradient, .gradient_second {
     width: 40px;
     height: 72px;
     position: absolute;
-    z-index: 3;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 1) 100%);
+    z-index: 4;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 58%, rgba(255,255,255,0.969625350140056) 86%, rgba(255,255,255,1) 100%);
     right: 0;
     top: 0;
     display: none;
+}
+
+.gradient_second {
+  width: 40px;
+  height: 161px;
 }
 
 .swiper-container, .swiper_second {
@@ -75,9 +80,10 @@
     margin-right: 16px;
 }
 
-.swiper-pagination {
+.swiper-pagination, .pag_2 {
     bottom: 16px;
 }
+
 
 .swiper-pagination-bullet {
     width: 12px;

@@ -2,7 +2,7 @@
     .swiper-container,
     .swiper_second {
         width: 335px;
-        height: 100px;
+        // height: 100px;
     }
 
     .swiper-wrapper {
@@ -23,7 +23,7 @@
       display: none;
     }
 
-    .gradient {
+    .gradient, .gradient_second {
         display: block;
     }
 }
