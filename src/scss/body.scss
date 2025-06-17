@@ -1,174 +1,186 @@
 @use 'variables' as *;
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    min-width: 320px;
-    background-color: $black;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
+  min-width: 320px;
+  background-color: $black;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
-    /* для более интуитивного обзначения размеров. по умолчанию content-box  это ширина width+borderwidth*/
+  box-sizing: inherit;
+  /* для более интуитивного обзначения размеров. по умолчанию content-box  это ширина width+borderwidth*/
 }
 
-
-
 main {
-    background-color: #f8f8f8;
-
-
+  background-color: #f8f8f8;
 }
 
 .main__header_container {
-    padding-top: 24px;
-    display: flex;
-    height: 40px;
-    justify-content: space-between;
+  padding-top: 24px;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
 }
 
 .main__header_hr_text_container {
-    display: flex;
+  display: flex;
 }
 
 .main__highlight {
-    margin-left: 0;
-    width: 4px;
-    height: 40px;
-    margin-top: 0px;
-    background-color: #41F6D7;
-    border: 0;
-    border-radius: 0 10px 10px 0;
-    z-index: 10;
+  margin-left: 0;
+  width: 4px;
+  height: 40px;
+  margin-top: 0px;
+  background-color: #41f6d7;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  z-index: 10;
 }
 
 .main__header_text {
-    margin-top: 0;
-    width: 288px;
-    height: 40px;
-    font-family: 'MyFont Bold', sans-serif;
-    font-size: 28px;
-    color: $black;
-    line-height: 40px;
-    letter-spacing: -0.6px;
-    font-weight: bold;
-    margin-left: 16px;
+  margin-top: 0;
+  width: 288px;
+  height: 40px;
+  font-family: 'MyFont Bold', sans-serif;
+  font-size: 28px;
+  color: $black;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  font-weight: bold;
+  margin-left: 16px;
 }
 
 .main__header_button_container {
-    display: none;
+  display: none;
 }
 
 .main__nav {
-    display: flex;
-    overflow: auto;
-    padding: 40px;
-
-
+  display: flex;
+  overflow: auto;
+  padding: 40px;
 }
 
 li {
-    display: block;
-
+  display: block;
 }
 
 .main__nav_text {
-    font-family: 'MyFont', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
+  font-family: 'MyFont', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
 }
 
 .main__nav a {
-    border-bottom: 0;
-    border-radius: 6px;
-    text-align: start;
-    color: #7E7E82;
-    padding: 8px 9.3px 8px 16.54px;
-    margin: 0;
-    white-space: nowrap;
-    text-decoration: none;
-    background-color: #fff0;
-    list-style: none;
+  border-bottom: 0;
+  border-radius: 6px;
+  text-align: start;
+  color: #7e7e82;
+  padding: 8px 9.3px 8px 16.54px;
+  margin: 0;
+  white-space: nowrap;
+  text-decoration: none;
+  background-color: #fff0;
+  list-style: none;
 }
 
 .main__nav a:active,
 .main__nav a:focus {
-    outline: 2px solid #B8FFEC;
-    background-color: #fff;
+  outline: 2px solid #b8ffec;
+  background-color: #fff;
 }
 
 .read-more-checker {
-    /*спрятал чекер с галочкой*/
-    opacity: 0;
-    position: absolute;
-    transition: 0.3s;
+  /*спрятал чекер с галочкой*/
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
 }
 
-
-
 .main__p_text {
-    font-family: 'MyFont', sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-    margin-left: 16px;
-    margin-right: 16px;
-    overflow: hidden;
-    min-width: 288px;
-    max-width: 540px;
-    max-height: 90px;
-    padding: 0px;
-
+  font-family: 'MyFont', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  margin-left: 16px;
+  margin-right: 16px;
+  overflow: hidden;
+  min-width: 288px;
+  max-width: 540px;
+  max-height: 90px;
+  padding: 0px;
 }
 
 .text {
-    max-height: 0px;
+  max-height: 0px;
 }
 
 .read-more-button {
-    margin-top: 16px;
-    margin-left: 24px;
-    width: 132px;
-    height: 24px;
+  margin-top: 16px;
+  margin-left: 24px;
+  width: 132px;
+  height: 24px;
 }
 
-.read-more-checker:checked~.text {
-    /*применяется для всех элементов с классом text, после перевода в статус checked элемента с классом read-more-checker*/
-    max-height: none;
-    transition: 0.3s;
-
+.read-more-checker:checked ~ .text {
+  /*применяется для всех элементов с классом text, после перевода в статус checked элемента с классом read-more-checker*/
+  max-height: none;
+  transition: 0.3s;
 }
-
 
 .main__button-expand {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    margin-top: 16px;
-    vertical-align: bottom;
-    margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-top: 16px;
+  vertical-align: bottom;
+  margin-right: 8px;
 }
 
 .main__button-text {
-    font-family: 'MyFont Medium', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #1B1C21;
-    font-weight: 500;
-
+  font-family: 'MyFont Medium', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c21;
+  font-weight: 500;
 }
 
 .main__img img {
-    width: 100%;
+  width: 100%;
 }
 
+.services-header {
+  max-width: 1056px;
+  min-width: 500px;
+  display: flex;
+  margin-left: 40px;
+  font-size: 14px;
+  color: $grey;
+  justify-content: space-between;
+}
 
+.services-header p:nth-child(1) {
+  max-width: 470px;
+  min-width: 372px;
+  flex-basis: auto;
+}
 
+.services-header p:nth-child(2) {
+  max-width: 127px;
+  min-width: 96px;
+  flex-basis: auto;
+}
+
+.services-header p:nth-child(3) {
+  max-width: 367px;
+  min-width: 260px;
+  flex-basis: auto;
+}
