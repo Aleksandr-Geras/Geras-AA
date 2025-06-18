@@ -14,11 +14,17 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/repo-name/', //Для github pages
+    // eslint-disable-next-line no-undef
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/maket-1.6/'  // Для GitHub Pages
+    : '/',           // Для локального сервера
   },
 
   devServer: {
     port: 4200,
+    static: {
+    directory: path.join(__dirname, 'dist'), // Указываем правильную папку
+  },
     historyApiFallback: true,
     devMiddleware: {
       writeToDisk: true,
@@ -125,6 +131,7 @@ module.exports = {
           from: './src/img',
           to: 'img',
         },
+        {from: 'src/.nojekyll', to: '.'},
       ],
     }),
 
