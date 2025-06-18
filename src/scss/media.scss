@@ -12,6 +12,10 @@
     flex-wrap: nowrap;
   }
 
+  /* попробовал убрать строку
+   .services-header p {
+    flex-wrap: nowrap;
+  } */
   /* .swiper__load-more {
         display: none;
     } */
@@ -237,15 +241,15 @@
     justify-content: space-between;
   }
 
-.services-header {
-  max-width: 1440px;
-  min-width: 720px;
-  display: flex;
-  margin-left: 40px;
-  font-size: 14px;
-  color: $grey;
-  justify-content: space-between;
-}
+  .services-header {
+    max-width: 1440px;
+    min-width: 720px;
+    display: flex;
+    margin-left: 40px;
+    font-size: 14px;
+    color: $grey;
+    justify-content: space-between;
+  }
 
   .slide__txt {
     display: flex;

@@ -14,6 +14,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/repo-name/', //Для github pages
   },
 
   devServer: {
