@@ -1,0 +1,24 @@
+@use 'variables' as *;
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    height: 85px;
+    margin-top: 16px;
+    font-family: 'MyFont', sans-serif;
+}
+.footer__container p{
+    color: $grey;
+    text-align: center;
+    font-size: 14px;
+    flex-basis: 40%;
+}
+
+footer{
+    border-top: 1px solid $line;
+    background-color: $bodyWhite;
+
+}
+.footer__container p:last-child {
+  text-align: right;
+  margin-right: 33px;
+}
