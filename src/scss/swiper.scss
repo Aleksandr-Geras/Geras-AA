@@ -52,6 +52,8 @@
   flex-wrap: wrap;
   background-color: inherit;
   bottom: 16px;
+  background-color: yellow;
+  height: 100%;
 }
 /* .image-slider__slide {
   width: 240px;
@@ -73,8 +75,6 @@
   margin: 16px 32px 16px 0;
   justify-content: space-between;
 }
-
-
 
 .slide a {
   width: 100%;
@@ -106,6 +106,10 @@
 
 .swiper-pagination,
 .pag_2 {
+  bottom: 16px;
+}
+.swiper-pagination,
+.pag_3 {
   bottom: 16px;
 }
 
@@ -154,7 +158,57 @@
   justify-content: space-between;
 }
 
-.slide__txt_title {
+.services-container {
+  margin-top: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper_third {
+  display: flex;
+  justify-content: space-between;
+}
+.service-name {
+  width: 348px;
+  margin-left: 56px;
+}
+.service-name li {
+  font-family: 'MyFont', sans-serif;
+  padding-bottom: 47px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.service-name li:first-child {
+  color: $grey;
+}
+.service-price {
+  width: 74px;
+  margin-left: 122px;
+}
+.service-price li {
+  font-family: 'MyFont', sans-serif;
+  padding-bottom: 47px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.service-price li:first-child {
+  color: $grey;
+}
+.service-time {
+  width: 81px;
+  margin-left: 122px;
+}
+.service-time li {
+  font-family: 'MyFont', sans-serif;
+  padding-bottom: 47px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.service-time li:first-child {
+  color: $grey;
+}
+
+/* .slide__txt_title {
   margin-top: 0;
   margin-bottom: 0;
   color: $grey;
@@ -173,4 +227,57 @@
   margin-left: 8px !important;
   overflow: hidden;
   margin-bottom: 16px;
-}
+} */
+/* .services-container {
+    max-width: 1056px;
+    // margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .services-header, .service-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .services-header {
+    font-weight: bold;
+    // border-bottom: 2px solid #ddd;
+  }
+
+  .service-col {
+    padding: 0 10px;
+  }
+
+
+  .service-price {
+    width: 74px;
+    text-align: center;
+    // margin-left: 122px;
+  }
+
+  .service-time {
+    width: 81px;
+    text-align: center;
+    // margin-left: 153px;
+  }
+
+  .service-action {
+    width: 10%;
+    text-align: center;
+  }
+
+  .slide__btn_small, .arrow {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+  .swiper_third {
+    margin: 20px 0;
+    width: 1056px;
+  }
+ */

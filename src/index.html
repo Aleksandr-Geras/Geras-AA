@@ -312,6 +312,78 @@
       <button class="show-more-btn-second" id="BtnSecond">Скрыть</button>
 
       <h1 class="title-page">Цены и услуги</h1>
+      <div class="services-container">
+        <div class="swiper_third" id="services" data-mobile="false">
+          <div class="gradient_third"></div>
+          <div class="swiper-wrapper">
+            <div class="service-name">
+              <li>Ремонтные услуги</li>
+              <li>Диагностика</li>
+              <li>Замена дисплея</li>
+              <li>Замена полифонического динамика</li>
+              <li>Тестирование с выдачей технического заключения</li>
+              <li>Замена программного обеспечения</li>
+            </div>
+            <div class="service-price">
+              <li>Цена</li>
+              <li>Бесплатно</li>
+              <li>1 000 ₽</li>
+              <li>1 000 ₽</li>
+              <li>1 000 ₽</li>
+              <li>1 000 ₽</li>
+            </div>
+            <div class="service-time">
+              <li>Срок</li>
+              <li>30 мин</li>
+              <li>30-120 мин</li>
+              <li>30-120 мин</li>
+              <li>30-120 мин</li>
+              <li>30-120 мин</li>
+            </div>
+
+            </div>
+          </div>
+        </div>
+        <p class="main__p_second">
+          Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+          услугу. Для получения коммерческого предложения на постоянное
+          обслуживание, оставьте заявку.
+        </p>
+        <div class="link_container">
+          <a class="getCommercial" href="#"
+            >Получить коммерческое предложение
+            <div class="arrow"></div
+          ></a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer__container">
+        <p>
+          © 2019 CPS<br />
+          Разработано командой Apesong
+        </p>
+        <p>Политика конфиденциальности</p>
+        <p>
+          Информация, размещенная на данной странице, не является публичной
+          офертой
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!--
+Вдруг что-то пригодится
+<input type="checkbox" class="load-more_ckb" id="swiperLoadMore"> -->
+<!-- <label for="swiperLoadMore" class="swiper__load-more" id="smBtn">
+  <span class="main__button-text show-all">Показать все</span>
+   <span class="main__button-text hide">Скрыть</span>
+</label> -->
+
+<!--  Старый код
+ <h1 class="title-page">Цены и услуги</h1>
       <div class="services-header">
         <p>Ремонтные услуги</p>
         <p>Цена</p>
@@ -354,7 +426,7 @@
             <div class="slide__txt" id="diagnostics">
               <p class="slide__txt_title">Ремонтные услуги</p>
               <p class="slide__txt_description">
-                Замена полифонического динамике
+                Замена полифонического динамика
               </p>
               <p class="slide__txt_title">Цена</p>
               <p class="slide__txt_description">1000 ₽</p>
@@ -402,35 +474,98 @@
           </div>
         </div>
         <div class="swiper-pagination pag_3"></div>
-      </div>
-      <p class="main__p_second">
-        Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
-        услугу. Для получения коммерческого предложения на постоянное
-        обслуживание, оставьте заявку.
-      </p>
-      <div class="link_container">
-        <a class="getCommercial" href="#"
-          >Получить коммерческое предложение
-          <div class="arrow"></div
-        ></a>
-      </div>
-    </main>
+      </div> -->
 
-    <footer>
-    <div class="footer__container">
-      <p>© 2019 CPS<br> Разработано командой Apesong</p>
-      <p>Политика конфиденциальности</p>
-      <p>Информация, размещенная на данной странице, не является публичной офертой</p>
-    </div>
-  </footer>
-  
-  </body>
-</html>
+<!--  Код предложила ИИ
+      <h1 class="title-page">Цены и услуги</h1>
+      <div class="services-container">
+        <div class="services-header">
+          <div class="service-col service-name">Ремонтные услуги</div>
+          <div class="service-col service-price">Цена</div>
+          <div class="service-col service-time">Срок</div>
+          <div class="service-col service-action"></div>
+        </div>
 
-<!--
-Вдруг что-то пригодится
-<input type="checkbox" class="load-more_ckb" id="swiperLoadMore"> -->
-<!-- <label for="swiperLoadMore" class="swiper__load-more" id="smBtn">
-  <span class="main__button-text show-all">Показать все</span>
-   <span class="main__button-text hide">Скрыть</span>
-</label> -->
+        <div class="swiper_third" id="services" data-mobile="false">
+          <div class="gradient_third"></div>
+          <div class="swiper-wrapper">
+
+            <div class="slide slide_third">
+              <div class="service-row">
+                <div class="service-col service-name">Диагностика</div>
+                <div class="service-col service-price">Бесплатно</div>
+                <div class="service-col service-time">30 мин</div>
+                <div class="service-col service-action">
+                  <a href="#">
+                    <div class="slide__btn_small"></div>
+                    <div class="arrow"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="slide slide_third">
+              <div class="service-row">
+                <div class="service-col service-name">Замена дисплея</div>
+                <div class="service-col service-price">1000 ₽</div>
+                <div class="service-col service-time">30-120 мин</div>
+                <div class="service-col service-action">
+                  <a href="#">
+                    <div class="slide__btn_small"></div>
+                    <div class="arrow"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide slide_third">
+              <div class="service-row">
+                <div class="service-col service-name">
+                  Замена полифонического динамика
+                </div>
+                <div class="service-col service-price">1000 ₽</div>
+                <div class="service-col service-time">30-120 мин</div>
+                <div class="service-col service-action">
+                  <a href="#">
+                    <div class="slide__btn_small"></div>
+                    <div class="arrow"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide slide_third">
+              <div class="service-row">
+                <div class="service-col service-name">
+                  Тестирование с выдачей технического заключения
+                </div>
+                <div class="service-col service-price">1000 ₽</div>
+                <div class="service-col service-time">30-120 мин</div>
+                <div class="service-col service-action">
+                  <a href="#">
+                    <div class="slide__btn_small"></div>
+                    <div class="arrow"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide_third">
+              <div class="service-row">
+                <div class="service-col service-name">
+                  Замена программного обеспечения
+                </div>
+                <div class="service-col service-price">1000 ₽</div>
+                <div class="service-col service-time">30-120 мин</div>
+                <div class="service-col service-action">
+                  <a href="#">
+                    <div class="slide__btn_small"></div>
+                    <div class="arrow"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination pag_3"></div>
+        </div>
+      </div> -->

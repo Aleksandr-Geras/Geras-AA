@@ -130,6 +130,7 @@ li {
   padding: 0px;
   font-size: 14px;
   line-height: 18px;
+  margin-top: 32px;
 }
 .link_container {
   margin-left: 32px;
@@ -192,7 +193,7 @@ li {
   width: 100%;
 }
 
-.services-header {
+/* .services-header {
   max-width: 1056px;
   min-width: 500px;
   display: flex;
@@ -200,9 +201,9 @@ li {
   font-size: 14px;
   color: $grey;
   justify-content: space-between;
-}
+} */
 
-.services-header p:nth-child(1) {
+/* .services-header p:nth-child(1) {
   max-width: 470px;
   min-width: 372px;
   flex-basis: auto;
@@ -218,4 +219,4 @@ li {
   max-width: 367px;
   min-width: 260px;
   flex-basis: auto;
-}
+} */
