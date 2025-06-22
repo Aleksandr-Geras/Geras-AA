@@ -160,6 +160,26 @@
   background-repeat: no-repeat;
   background-position: left;
 }
+.service-button {
+  width: 119px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: $pinkBtn;
+}
+.service-button li {
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  /* top: 6px;
+  left: 12px; */
+  padding: 4px 40px 4px 12px;
+  line-height: 24px;
+}
+.service__buy {
+background-image: url(../img/arrows/expand.png);
+}
 
 /* .slide__btn_small {
   width: 119px;
@@ -167,6 +187,7 @@
   border-radius: 16px;
   background-color: $pinkBtn;
 }
+
 
 .slide__btn_small:after {
   content: 'Заказать';

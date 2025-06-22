@@ -167,8 +167,10 @@
 .swiper_third {
   display: flex;
   justify-content: space-between;
+  padding-left: 32px !important;
 }
 .service-name {
+  background-color: #cf2ba6;
   width: 348px;
   margin-left: 56px;
 }
@@ -184,6 +186,7 @@
 .service-price {
   width: 74px;
   margin-left: 122px;
+  background-color: #cf2ba6;
 }
 .service-price li {
   font-family: 'MyFont', sans-serif;
@@ -197,6 +200,7 @@
 .service-time {
   width: 81px;
   margin-left: 122px;
+  background-color: #cf2ba6;
 }
 .service-time li {
   font-family: 'MyFont', sans-serif;
