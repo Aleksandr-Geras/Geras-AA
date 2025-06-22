@@ -165,20 +165,23 @@
   height: 32px;
   border-radius: 16px;
   background-color: $pinkBtn;
+  background-image: url(../img/arrows/goside.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  margin-top: 57px;
+  margin-left: 111px;
 }
-.service-button li {
+.service-button a {
   color: $white;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 12px;
   position: relative;
-  /* top: 6px;
-  left: 12px; */
-  padding: 4px 40px 4px 12px;
+  top: 4px;
+  left: 12px;
+
   line-height: 24px;
-}
-.service__buy {
-background-image: url(../img/arrows/expand.png);
+  letter-spacing: -0.15px;
 }
 
 /* .slide__btn_small {

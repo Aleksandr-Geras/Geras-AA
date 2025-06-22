@@ -7,6 +7,12 @@
   font-size: 16px;
   color: #7e7e82;
   padding: 16px;
+   background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 58%,
+    rgba(255, 255, 255, 0.969625350140056) 86%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .gradient,
@@ -52,8 +58,8 @@
   flex-wrap: wrap;
   background-color: inherit;
   bottom: 16px;
-  background-color: yellow;
   height: 100%;
+
 }
 /* .image-slider__slide {
   width: 240px;
@@ -160,9 +166,9 @@
 
 .services-container {
   margin-top: 32px;
-  width: 100%;
+  width: 1056px;
   height: 100%;
-}
+  }
 
 .swiper_third {
   display: flex;
@@ -170,46 +176,65 @@
   padding-left: 32px !important;
 }
 .service-name {
-  background-color: #cf2ba6;
+  background-color: $white;
   width: 348px;
-  margin-left: 56px;
+  padding-left: 24px;
+  border-radius: 6px 0 0 6px;
+
+
 }
 .service-name li {
   font-family: 'MyFont', sans-serif;
-  padding-bottom: 47px;
+  padding-bottom: 23px;
+  padding-top: 23px;
   font-size: 14px;
   line-height: 18px;
 }
 .service-name li:first-child {
   color: $grey;
+  background-color: $bodyWhite;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  margin-left: -24px;
+  border-radius: 6px 0 0 0;
+
 }
 .service-price {
-  width: 74px;
-  margin-left: 122px;
-  background-color: #cf2ba6;
+  width: 196px;
+  // margin-left: 122px;
+  background-color: $white
 }
 .service-price li {
   font-family: 'MyFont', sans-serif;
-  padding-bottom: 47px;
+  padding-bottom: 23px;
+  padding-top: 23px;
   font-size: 14px;
   line-height: 18px;
+  padding-left: 122px;
 }
 .service-price li:first-child {
   color: $grey;
+  background-color: $bodyWhite;
+  padding-bottom: 16px;
 }
 .service-time {
-  width: 81px;
-  margin-left: 122px;
-  background-color: #cf2ba6;
+  width: 456px;
+  // margin-left: 122px;
+  background-color: $white;
 }
 .service-time li {
   font-family: 'MyFont', sans-serif;
-  padding-bottom: 47px;
+  padding-bottom: 23px;
+  padding-top: 23px;
+  padding-left: 122px;
+  padding-right: 24px;
   font-size: 14px;
   line-height: 18px;
 }
 .service-time li:first-child {
   color: $grey;
+  background-color: $bodyWhite;
+  padding-bottom: 16px;
 }
 
 /* .slide__txt_title {
