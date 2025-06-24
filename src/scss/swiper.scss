@@ -189,6 +189,7 @@
   padding-top: 23px;
   font-size: 14px;
   line-height: 18px;
+  border-bottom: 1px solid $backBody;
 }
 .service-name li:first-child {
   color: $grey;
@@ -197,6 +198,7 @@
   padding-left: 24px;
   margin-left: -24px;
   border-radius: 6px 0 0 0;
+  border-bottom: 0 solid $backBody;
 
 }
 .service-price {
@@ -211,31 +213,49 @@
   font-size: 14px;
   line-height: 18px;
   padding-left: 122px;
+  border-bottom: 1px solid $backBody;
 }
 .service-price li:first-child {
   color: $grey;
   background-color: $bodyWhite;
   padding-bottom: 16px;
+  border-bottom: 0 solid $backBody;
 }
 .service-time {
-  width: 456px;
-  // margin-left: 122px;
+  width: 201px;
   background-color: $white;
 }
 .service-time li {
+  // display: flex;
+  margin: 0;
   font-family: 'MyFont', sans-serif;
   padding-bottom: 23px;
   padding-top: 23px;
   padding-left: 122px;
-  padding-right: 24px;
+  // padding-right: 24px;
   font-size: 14px;
   line-height: 18px;
+  border-bottom: 1px solid $backBody;
 }
 .service-time li:first-child {
   color: $grey;
   background-color: $bodyWhite;
   padding-bottom: 16px;
+  border-bottom: 0 solid $backBody;
 }
+
+.service-button li {
+  margin: 0;
+  font-family: 'MyFont', sans-serif;
+  padding-bottom: 23px;
+  padding-top: 23px;
+  padding-left: 111px;
+  // padding-right: 24px;
+  font-size: 14px;
+  line-height: 18px;
+  border-bottom: 1px solid $backBody;
+}
+
 
 /* .slide__txt_title {
   margin-top: 0;

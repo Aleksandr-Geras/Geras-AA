@@ -160,18 +160,38 @@
   background-repeat: no-repeat;
   background-position: left;
 }
+
 .service-button {
+  width: 254px;
+  height: 324px;
+  background-color: $white;
+  margin-top: 57px;
+}
+ /* .service-button {
+  appearance: none;
+  // position: absolute;
   width: 119px;
   height: 32px;
   border-radius: 16px;
+  text-align: start;
+  padding-left: 12px;
+  border-color: $pinkBtn;
   background-color: $pinkBtn;
   background-image: url(../img/arrows/goside.svg);
   background-repeat: no-repeat;
   background-position: 90% 50%;
-  margin-top: 57px;
-  margin-left: 111px;
-}
-.service-button a {
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+}  */
+
+
+/* .service-button:after {
+  
   color: $white;
   font-weight: 700;
   text-transform: uppercase;
@@ -182,7 +202,7 @@
 
   line-height: 24px;
   letter-spacing: -0.15px;
-}
+}  */
 
 /* .slide__btn_small {
   width: 119px;
