@@ -4,9 +4,12 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 let slider = document.querySelector('.image-slider');
 let sliderSecond = document.querySelector('.swiper_second');
+let sliderThird = document.querySelector('.swiper_third-media');
 let mySwiper;
 // eslint-disable-next-line no-unused-vars
 let mySwiper_second;
+// eslint-disable-next-line no-unused-vars
+let mySwiper_third;
 let windowWidth = window.innerWidth;
 
 function mobileSlider() {
@@ -40,6 +43,23 @@ function mobileSlider() {
       },
 
       slidesPerView: 1.3,
+      spaceBetween: 20,
+      loop: true,
+    });
+
+    mySwiper_third = new Swiper(sliderThird, {
+      modules: [Navigation, Pagination],
+      slideClass: 'services-container-media',
+      speed: 400,
+      // spaceBetween: 100,
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+
+      slidesPerView: 1.2,
       spaceBetween: 20,
       loop: true,
     });

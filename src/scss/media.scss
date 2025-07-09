@@ -29,7 +29,7 @@
 
   .gradient,
   .gradient_second,
-  .gradient_third {
+  .gradient_third-media {
     display: block;
   }
 
@@ -39,20 +39,23 @@
   }
 
   .swiper_third-media {
-    background-color: $white;
-    width: 260px;
-    height: 200px;
-    margin-left: 8px;
-    margin-top: 16px;
     display: flex;
     flex-wrap: inherit;
     border-radius: 6px;
+    margin-left: -8px;
+    overflow: hidden;
   }
   .services-container-media {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     flex-direction: column;
     padding-left: 16px;
-    height: 168px;
+    margin-left: 16px;
+    margin-top: 16px;
+    height: 200px;
+    width: 260px;
+    background-color: $white;
   }
   .services-container-media p {
     font-family: 'MyFont', sans-serif;
@@ -66,16 +69,17 @@
     font-size: 14px;
     font-weight: normal;
   }
-  .services-name-media {
+  .services-media {
     // margin: 16px 0 0 0;
     width: 228px;
+    margin-bottom: 6px;
   }
 
   .button-buy {
-    top: -48px;
+    top: -38px;
     // right: 125px;
     position: relative;
-    left: 109px;
+    left: 96px;
     width: 119px;
     height: 32px;
     font-family: 'MyFont', sans-serif;
@@ -87,6 +91,7 @@
   .swiper_third {
     display: none;
   }
+
 }
 @media (min-width: 401px) and (max-width: 766px) {
   .swiper_third-media {
