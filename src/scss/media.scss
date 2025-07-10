@@ -29,7 +29,7 @@
 
   .gradient,
   .gradient_second,
-  .gradient_third-media {
+  .gradient_fourth-media {
     display: block;
   }
 
@@ -38,7 +38,7 @@
     transform: translateX(105px) translateY(150px);
   }
 
-  .swiper_third-media {
+  .swiper_fourth-media {
     display: flex;
     flex-wrap: inherit;
     border-radius: 6px;
@@ -94,7 +94,7 @@
 
 }
 @media (min-width: 401px) and (max-width: 766px) {
-  .swiper_third-media {
+  .swiper_fourth-media {
     display: none;
   }
 }
@@ -224,13 +224,13 @@
   .slide_third a {
     margin: 15px 16px 0 0;
   }
-  .swiper_third-media {
+  .swiper_fourth-media {
     display: none;
   }
 }
 
 @media (min-width: 1119px) {
-  .swiper_third-media {
+  .swiper_fourth-media {
     display: none;
   }
   header {
@@ -304,9 +304,6 @@
     width: 100%;
   }
 
-  .swiper_third-media {
-    display: none;
-  }
 
   /* .slide_third {
     max-width: 1440px;
