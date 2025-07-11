@@ -110,14 +110,6 @@
   margin-right: 16px;
 }
 
-.swiper-pagination,
-.pag_2 {
-  bottom: 16px;
-}
-.swiper-pagination,
-.pag_3 {
-  bottom: 16px;
-}
 
 .swiper-pagination-bullet {
   width: 12px;
@@ -233,6 +225,7 @@
   display: flex;
   justify-content: space-between;
   // height: 100%;
+  padding: 0;
 }
 .service-name {
   // background-color: $white;
@@ -336,76 +329,4 @@
   line-height: 32px;
 }
 
-/* .slide__txt_title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: $grey;
-  font-size: 14px;
-  font-weight: normal;
-}
-.slide__txt_description {
-  margin-top: 4px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: normal;
-}
 
-.swiper_third {
-  max-width: 1100px;
-  margin-left: 8px !important;
-  overflow: hidden;
-  margin-bottom: 16px;
-} */
-/* .services-container {
-    max-width: 1056px;
-    // margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-
-  .services-header, .service-row {
-    display: flex;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .services-header {
-    font-weight: bold;
-    // border-bottom: 2px solid #ddd;
-  }
-
-  .service-col {
-    padding: 0 10px;
-  }
-
-
-  .service-price {
-    width: 74px;
-    text-align: center;
-    // margin-left: 122px;
-  }
-
-  .service-time {
-    width: 81px;
-    text-align: center;
-    // margin-left: 153px;
-  }
-
-  .service-action {
-    width: 10%;
-    text-align: center;
-  }
-
-  .slide__btn_small, .arrow {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-
-  .swiper_third {
-    margin: 20px 0;
-    width: 1056px;
-  }
- */
