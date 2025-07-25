@@ -53,15 +53,16 @@ function mobileSlider() {
       speed: 400,
       // spaceBetween: 100,
 
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true,
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
       },
 
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-      loop: true,
+
     });
 
     slider.dataset.mobile = 'true';
