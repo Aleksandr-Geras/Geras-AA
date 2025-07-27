@@ -43,8 +43,10 @@
     flex-wrap: inherit;
     margin-left: -8px;
     overflow: hidden;
-    top:16px;
+    top: 16px;
     flex-shrink: 0;
+    position: relative; /* Важно для абсолютного позиционирования пагинации */
+    padding-bottom: 30px; /* Отступ для пагинации */
   }
   .services-container-media {
     display: flex;
@@ -93,8 +95,6 @@
   .swiper_third {
     display: none;
   }
-
-
 }
 @media (min-width: 401px) and (max-width: 766px) {
   .swiper_fourth-media {
@@ -230,6 +230,7 @@
   .swiper_fourth-media {
     display: none;
   }
+
 }
 
 @media (min-width: 1119px) {
@@ -299,14 +300,13 @@
     width: 100%;
   }
 
-  .swiper-services-container {
+  .service-container {
     width: 100%;
   }
 
   .swiper_second {
     width: 100%;
   }
-
 
   /* .slide_third {
     max-width: 1440px;

@@ -66,6 +66,8 @@ function mobileSlider() {
     });
 
     slider.dataset.mobile = 'true';
+    sliderSecond.dataset.mobile = 'true';
+    sliderFourth.dataset.mobile = 'true';
   }
 
   if (windowWidth > 400) {
