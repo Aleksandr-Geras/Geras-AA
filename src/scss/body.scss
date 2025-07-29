@@ -16,12 +16,13 @@ body {
 *::after,
 *::before {
   box-sizing: inherit;
-  /* для более интуитивного обзначения размеров. по умолчанию content-box  это ширина width+borderwidth*/
+  /* для более интуитивного обозначения размеров. по умолчанию content-box  это ширина width+borderwidth*/
 }
 
 main {
   background-color: $bodyWhite;
   min-height: 100vh;
+  position: relative;
 }
 
 .main__header_container {

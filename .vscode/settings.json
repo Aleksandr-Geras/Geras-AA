@@ -17,4 +17,10 @@
   "terminal.integrated.defaultProfile.osx": "bash",
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "cSpell.words": [
+    "Apesong",
+    "borderwidth",
+    "checkstatus",
+    "hibben"
+  ],
 }

@@ -85,6 +85,17 @@
   .swiper_third {
     display: none;
   }
+  .header__menu_drop-menu-desktop {
+    display: none;
+  }
+  .footer__container {
+    display: inline;
+    height: 147px;
+
+    .footer__container p {
+      text-align: center;
+    }
+  }
 }
 @media (min-width: 401px) and (max-width: 766px) {
   .swiper_fourth-media {
@@ -100,6 +111,9 @@
 
   header {
     max-width: 1119px;
+  }
+  .header__menu_drop-menu-desktop {
+    display: none;
   }
 
   .header__menu {
@@ -221,9 +235,12 @@
     display: none;
   }
   .header__menu_drop-menu-desktop {
-  display: none;
-}
-
+    display: none;
+  }
+  .popup__button {
+    position: absolute;
+    transform: translateX(-90px) translateY(10px);
+  }
 }
 
 @media (min-width: 1119px) {
@@ -231,44 +248,41 @@
     display: none;
   }
 
-
-
   header {
     display: none;
   }
 
-.header__menu_drop-menu-desktop {
- display: flex;
+  .header__menu_drop-menu-desktop {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
     left: -10px;
-    top: 0;
+    top: 0px;
     width: 320px;
     background-color: #fff;
     box-shadow: 16px 0px 24px -13px rgba(34, 60, 80, 0.18);
     text-align: start;
-    transition: .5s all;
+    transition: 0.5s all;
     height: 100%;
     padding: 24px;
     z-index: 5;
-}
-main {
-  padding-left: 310px;
-}
-.header__menu-logo {
-  margin-top: 0 !important;
-}
-
-.drop-menu__search-btn{
-  justify-content: space-between;
-  height: 10px;
-}
-.drop-menu__list {
-    list-style-type: none;
-    margin-top: -250px;
+  }
+  main {
+    padding-left: 310px;
+  }
+  .header__menu-logo {
+    margin-top: 0 !important;
   }
 
+  .drop-menu__search-btn {
+    justify-content: space-between;
+    height: 10px;
+  }
+  .drop-menu__list {
+    list-style-type: none;
+    margin-top: -1100px;
+  }
 
   .main__header_button_container {
     display: flex;
@@ -337,7 +351,8 @@ main {
     width: 100%;
   }
 
-
-
-
+  .popup__button {
+    position: absolute;
+    transform: translateX(-90px) translateY(10px);
+  }
 }
