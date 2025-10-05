@@ -12,6 +12,16 @@ body {
   padding: 0;
 }
 
+/* body > *:not(.popup-back) {
+    transition: filter 0.3s ease;
+}
+
+body.blurred > *:not(.popup-back) {
+    filter: blur(5px);
+    pointer-events: none;
+} */
+
+
 *,
 *::after,
 *::before {
@@ -191,6 +201,6 @@ li {
 }
 
 .main__img img {
-  width: 100%;
+  width: 95%;
 }
 

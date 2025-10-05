@@ -41,18 +41,18 @@
               </ul>
               <div class="drop-menu__footer">
                 <div class="footer__button-conainer menu-btn">
-                  <a
+                  <button
                     href="#"
                     title="Позвонить"
-                    class="header__menu-call"
+                    class="header__menu-call callBtn"
                     id="call"
-                  ></a>
-                  <a
+                  ></button>
+                  <button
                     href="#"
                     title="Чат"
-                    class="header__menu-chat"
-                    id="chat"
-                  ></a>
+                    class="header__menu-chat chatBtn"
+                    id="chatBtn"
+                  ></button>
                   <a href="#" title="header__menu-profile" id="profile"></a>
                 </div>
                 <a href="#" title="Почта" class="drop-menu__email"
@@ -77,10 +77,10 @@
           <div class="header__menu_container_button-hr">
             <!--исчезающие кнопки меню 768px-->
             <div class="header__menu_container_hibben">
-              <a href="#" class="header__menu-call">
+              <a href="#" class="header__menu-call callBtn">
                 <img src="img/icon/call.svg" alt="Позвонить" />
               </a>
-              <a href="#" class="header__menu-chat">
+              <a href="#" class="header__menu-chat chatBtn">
                 <img src="img/icon/chat.svg" alt="Чат" />
               </a>
               <a href="#" class="header__menu-profile">
@@ -116,13 +116,13 @@
         </ul>
         <div class="drop-menu__footer">
           <div class="footer__button-conainer menu-btn">
-            <a
+            <button
               href="#"
               title="Позвонить"
-              class="header__menu-call"
-              id="call"
-            ></a>
-            <a href="#" title="Чат" class="header__menu-chat" id="chat"></a>
+              class="header__menu-call callBtn"
+              id="callBtn"
+            ></button>
+            <button href="#" title="Чат" class="header__menu-chat chatBtn" id="chat"></button>
             <a href="#" title="header__menu-profile" id="profile"></a>
           </div>
           <a href="#" title="Почта" class="drop-menu__email">mail@cps.com</a>
@@ -530,7 +530,7 @@
     <!-- Popup container -->
     <div class="popup__container" id="popup-back">
         <div class="popup__container_content ">
-                <div class="popup__button menu-btn">
+                <div class="popup__button menu-btn" id="CloseChat">
                   <a class="popup__button_close" href="#"><span></span></a>
                 </div>
                 <div class="popup__title_container">
@@ -539,16 +539,16 @@
                 </div>
               <div class="popup__input_container">
                 <div class="popup__input">
-                  <input type="text" name="name" autocomplete="Имя">
+                  <input type="text" name="name" autocomplete="name" placeholder="Имя">
                 </div>
                 <div class="popup__input">
-                  <input type="tel" name="phone" autocomplete="Телефон">
+                  <input type="tel" name="phone" autocomplete="tel" placeholder="Телефон">
                 </div>
                 <div class="popup__input">
-                  <input type="email" name="email" autocomplete="Электронная почта">
+                  <input type="email" name="email" autocomplete="email" placeholder="Электронная почта">
                 </div>
                 <div class="popup__input">
-                  <textarea name="message" autocomplete="off" class="message" placeholder="Сообщение">
+                  <textarea name="message" autocomplete="on" class="message" placeholder="Сообщение"></textarea>
                 </div>
               </div>
               <p class="popup__copyright">Нажимая “отправить”, вы даете согласие на <span><a href="#">обработку персональных данных</a></span> и соглашаетесь с нашей <span><a href="#">политикой конфиденциальности</a></span></p>
@@ -563,7 +563,7 @@
 
 <div class="popup__container" id="popup-call">
   <div class="popup__container_content ">
-    <div class="popup__button menu-btn">
+    <div class="popup__button menu-btn" id="CloseCall">
       <a class="popup__button_close" href="#"><span></span>
       </a>
     </div>
@@ -788,5 +788,6 @@
           <div class="swiper-pagination pag_3"></div>
         </div>
       </div> -->
+
 
 

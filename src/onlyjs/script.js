@@ -1,6 +1,10 @@
-
-
-
+// const chatBtn = document.querySelectorAll('chatBtn');
+const buttons = document.querySelectorAll('.chatBtn');
+const popupMenu = document.getElementById('popup-back');
+const closeChat = document.getElementById('CloseChat');
+const callBtn = document.querySelectorAll('.callBtn')
+const popupCall = document.getElementById('popup-call')
+const closeCall = document.getElementById('CloseCall');
 
 function showMore() {
   const containerBrands = document.querySelector('.swiper-container');
@@ -37,7 +41,31 @@ function showMoreSecond() {
     btnTxt.style.backgroundPosition = '-5%, 40%';
   }
 }
-
 document.getElementById('smBtn').addEventListener('click', showMore);
-
 document.getElementById('BtnSecond').addEventListener('click', showMoreSecond);
+// chat
+buttons.forEach((button) => {
+  button.addEventListener('click', function () {
+    popupMenu.classList.toggle('active');
+    document.body.classList.toggle('blurred');
+  });
+});
+  closeChat.addEventListener('click', function () {
+    popupMenu.classList.toggle('active');
+    document.body.classList.toggle('blurred');
+  });
+
+
+  //call
+  callBtn.forEach((button) => {
+  button.addEventListener('click', function () {
+    popupCall.classList.toggle('active');
+  });
+});
+ closeCall.addEventListener('click', function () {
+    popupCall.classList.toggle('active');
+  });
+
+
+
+
