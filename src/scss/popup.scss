@@ -65,11 +65,19 @@
   display: flex;
   align-items: center;
   margin-top: 40px;
+  font-family: 'MyFont Bold', sans-serif;
 }
 
 .popup__title_container .main__hr_highlight {
   position: absolute;
-  left: 0;
+  margin-left: 0;
+  width: 4px;
+  height: 40px;
+  margin-top: 0px;
+  background-color: #41f6d7;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  z-index: 10;
 }
 .popup__title {
   font-size: 24px;
@@ -93,7 +101,7 @@
 .popup__input .message {
   height: 118px;
   width: 100%;
-  font-family: 'TTLakes';
+  font-family: 'MyFont', sans-serif;
   font-size: 16px;
   color: $grey;
   padding-left: 16px;
@@ -111,7 +119,7 @@
 }
 
 .popup__input input::placeholder {
-  font-family: 'TTLakes';
+  font-family: 'MyFont', sans-serif;
   font-size: 16px;
   color: $grey;
   opacity: 0.6;
@@ -121,6 +129,7 @@
   font-size: 14px;
   line-height: 16px;
   margin: 16px;
+  font-family: 'MyFont', sans-serif;
 }
 
 .popup__copyright span a {
@@ -134,7 +143,6 @@
   width: 100%;
   height: 50px;
 }
-
 
 /*
 // заблюрить

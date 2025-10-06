@@ -12,14 +12,6 @@ body {
   padding: 0;
 }
 
-/* body > *:not(.popup-back) {
-    transition: filter 0.3s ease;
-}
-
-body.blurred > *:not(.popup-back) {
-    filter: blur(5px);
-    pointer-events: none;
-} */
 
 
 *,
@@ -204,3 +196,44 @@ li {
   width: 95%;
 }
 
+
+
+
+
+
+/* Стили для блюр оверлея */
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Для Safari */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998; /* Меньше чем у меню, но больше чем у основного контента */
+}
+
+.blur-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Обновите стили для popup-menu */
+#popup-back {
+    position: fixed;
+    z-index: 999; /* Должен быть выше чем у blur-overlay */
+    /* остальные ваши стили */
+}
+
+/* Если нужно заблюрить основной контент, но не меню */
+.main {
+    transition: filter 0.3s ease;
+}
+
+.main.blurred {
+    filter: blur(5px);
+}
