@@ -12,15 +12,19 @@ body {
   padding: 0;
 }
 
+
+
 *,
 *::after,
 *::before {
   box-sizing: inherit;
-  /* для более интуитивного обзначения размеров. по умолчанию content-box  это ширина width+borderwidth*/
+  /* для более интуитивного обозначения размеров. по умолчанию content-box  это ширина width+borderwidth*/
 }
 
 main {
-  background-color: #f8f8f8;
+  background-color: $bodyWhite;
+  min-height: 100vh;
+  position: relative;
 }
 
 .main__header_container {
@@ -54,7 +58,6 @@ main {
   color: $black;
   line-height: 40px;
   letter-spacing: -0.6px;
-  font-weight: bold;
   margin-left: 16px;
 }
 
@@ -130,6 +133,7 @@ li {
   padding: 0px;
   font-size: 14px;
   line-height: 18px;
+  margin-top: 32px;
 }
 .link_container {
   margin-left: 32px;
@@ -189,33 +193,47 @@ li {
 }
 
 .main__img img {
-  width: 100%;
+  width: 95%;
 }
 
-.services-header {
-  max-width: 1056px;
-  min-width: 500px;
-  display: flex;
-  margin-left: 40px;
-  font-size: 14px;
-  color: $grey;
-  justify-content: space-between;
+
+
+
+
+
+/* Стили для блюр оверлея */
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Для Safari */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998; /* Меньше чем у меню, но больше чем у основного контента */
 }
 
-.services-header p:nth-child(1) {
-  max-width: 470px;
-  min-width: 372px;
-  flex-basis: auto;
+.blur-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-.services-header p:nth-child(2) {
-  max-width: 127px;
-  min-width: 96px;
-  flex-basis: auto;
+/* Обновите стили для popup-menu */
+#popup-back {
+    position: fixed;
+    z-index: 999; /* Должен быть выше чем у blur-overlay */
+    /* остальные ваши стили */
 }
 
-.services-header p:nth-child(3) {
-  max-width: 367px;
-  min-width: 260px;
-  flex-basis: auto;
+/* Если нужно заблюрить основной контент, но не меню */
+.main {
+    transition: filter 0.3s ease;
+}
+
+.main.blurred {
+    filter: blur(5px);
 }

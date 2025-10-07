@@ -1,0 +1,164 @@
+@use 'variables' as *;
+
+.popup__container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #ffffff, $alpha: 0.96);
+  position: fixed;
+  // top: 0;
+  right: 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: hidden;
+  transition: 0.1s;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+.visibility {
+  opacity: 1;
+  transform: scaleY(1) scaleX(1);
+  height: 100vh;
+}
+
+.popup__container_content {
+  min-width: 320px;
+  max-width: 440px;
+  height: 100%;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: -12px 0px 11px -6px rgba(0, 0, 0, 0.1);
+}
+
+.popup__button_close {
+  margin: 24px 0px 40px 16px;
+}
+
+.popup__button_close span {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background-color: #fff;
+  top: 25%;
+  left: 47%;
+  transform: rotate(45deg);
+}
+
+.popup__button_close span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background-color: #fff;
+  transform: rotate(90deg);
+}
+
+.popup__title_container {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  font-family: 'MyFont Bold', sans-serif;
+}
+
+.popup__title_container .main__hr_highlight {
+  position: absolute;
+  margin-left: 0;
+  width: 4px;
+  height: 40px;
+  margin-top: 0px;
+  background-color: #41f6d7;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  z-index: 10;
+}
+.popup__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+.popup__input_container {
+  margin: 24px 16px;
+  min-width: 288px;
+}
+
+.popup__input input {
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid $backBody;
+}
+
+.popup__input .message {
+  height: 118px;
+  width: 100%;
+  font-family: 'MyFont', sans-serif;
+  font-size: 16px;
+  color: $grey;
+  padding-left: 16px;
+  border-radius: 8px;
+  border: 1px solid $backBody;
+}
+
+.popup__input .message::placeholder {
+  opacity: 0.6;
+  padding-top: 16px;
+}
+.popup__input .message:focus::placeholder,
+.popup__input input:focus::placeholder {
+  opacity: 0;
+}
+
+.popup__input input::placeholder {
+  font-family: 'MyFont', sans-serif;
+  font-size: 16px;
+  color: $grey;
+  opacity: 0.6;
+  padding-left: 16px;
+}
+.popup__copyright {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 16px;
+  font-family: 'MyFont', sans-serif;
+}
+
+.popup__copyright span a {
+  text-decoration: none;
+  color: $pinkBtn;
+}
+
+.popup__send_container {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 50px;
+}
+
+/*
+// заблюрить
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+} */

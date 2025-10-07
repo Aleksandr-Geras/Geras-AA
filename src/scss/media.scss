@@ -5,20 +5,12 @@
   .swiper_second,
   .swiper_third {
     width: 335px;
-    // height: 100px;
   }
 
   .swiper-wrapper {
     flex-wrap: nowrap;
   }
 
-  /* попробовал убрать строку
-   .services-header p {
-    flex-wrap: nowrap;
-  } */
-  /* .swiper__load-more {
-        display: none;
-    } */
   .show-more-btn {
     display: none;
   }
@@ -29,13 +21,85 @@
 
   .gradient,
   .gradient_second,
-  .gradient_third {
+  .gradient_fourth-media {
     display: block;
   }
 
   .slide_third a {
     position: absolute;
     transform: translateX(105px) translateY(150px);
+  }
+
+  .swiper_fourth-media {
+    display: flex;
+    flex-wrap: inherit;
+    margin-left: -8px;
+    overflow: hidden;
+    top: 16px;
+    flex-shrink: 0;
+    position: relative; /* Важно для абсолютного позиционирования пагинации */
+    padding-bottom: 30px; /* Отступ для пагинации */
+  }
+  .services-container-media {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 16px;
+    margin-left: 16px;
+    margin-top: 16px;
+    height: 200px;
+    width: 260px;
+    background-color: $white;
+    border-radius: 6px;
+  }
+  .services-container-media p {
+    font-family: 'MyFont', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .slide__txt_title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $grey;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .services-media {
+    width: 228px;
+    margin-bottom: 6px;
+  }
+
+  .button-buy {
+    top: -38px;
+    position: relative;
+    left: 100px;
+    width: 100px;
+    height: 32px;
+    font-family: 'MyFont', sans-serif;
+    font-size: 14px;
+  }
+  .title-media {
+    color: $grey;
+  }
+  .swiper_third {
+    display: none;
+  }
+  .header__menu_drop-menu-desktop {
+    display: none;
+  }
+  .footer__container {
+    display: inline;
+    height: 147px;
+
+    .footer__container p {
+      text-align: center;
+    }
+  }
+}
+@media (min-width: 401px) and (max-width: 766px) {
+  .swiper_fourth-media {
+    display: none;
   }
 }
 
@@ -47,6 +111,9 @@
 
   header {
     max-width: 1119px;
+  }
+  .header__menu_drop-menu-desktop {
+    display: none;
   }
 
   .header__menu {
@@ -164,11 +231,57 @@
   .slide_third a {
     margin: 15px 16px 0 0;
   }
+  .swiper_fourth-media {
+    display: none;
+  }
+  .header__menu_drop-menu-desktop {
+    display: none;
+  }
+  .popup__button {
+    position: absolute;
+    transform: translateX(-90px) translateY(10px);
+  }
 }
 
 @media (min-width: 1119px) {
+  .swiper_fourth-media {
+    display: none;
+  }
+
   header {
     display: none;
+  }
+
+  .header__menu_drop-menu-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    width: 320px;
+    background-color: #fff;
+    box-shadow: 16px 0px 24px -13px rgba(34, 60, 80, 0.18);
+    text-align: start;
+    transition: 0.5s all;
+    height: 100%;
+    padding: 24px;
+    z-index: 5;
+  }
+  main {
+    padding-left: 310px;
+  }
+  .header__menu-logo {
+    margin-top: 0 !important;
+  }
+
+  .drop-menu__search-btn {
+    justify-content: space-between;
+    height: 10px;
+  }
+  .drop-menu__list {
+    list-style-type: none;
+    margin-top: -1100px;
   }
 
   .main__header_button_container {
@@ -230,66 +343,16 @@
     width: 100%;
   }
 
-  .slide_third {
-    max-width: 1440px;
-    min-width: 720px;
-    height: 64px;
-    display: flex;
-    flex: 1 1 auto;
-    margin-bottom: 0;
-    margin-left: 24px;
-    justify-content: space-between;
+  .service-container {
+    width: 100%;
   }
-
-  .services-header {
-    max-width: 1440px;
-    min-width: 720px;
-    display: flex;
-    margin-left: 40px;
-    font-size: 14px;
-    color: $grey;
-    justify-content: space-between;
-  }
-
-  .slide__txt {
-    display: flex;
-    margin-left: 16px;
-    margin-top: 23px;
-    flex-wrap: nowrap;
-    height: 24px;
-    // width: 100%;
-    justify-content: space-between;
-  }
-
-  .slide__txt_title {
-    display: none;
-  }
-
-  .slide__txt p:nth-child(2) {
-    max-width: 470px;
-    min-width: 372px;
-    flex-basis: auto;
-  }
-  .slide__txt p:nth-child(4) {
-    max-width: 127px;
-    min-width: 96px;
-    flex-basis: auto;
-  }
-
-  .slide__txt p:nth-child(6) {
-    width: 81px;
-    margin-right: 20px;
-    flex-basis: auto;
-  }
-
-  .slide_third a {
-    margin: 15px 16px 0 0;
-  }
-  /* .slide__btn{
-
-  } */
 
   .swiper_second {
     width: 100%;
+  }
+
+  .popup__button {
+    position: absolute;
+    transform: translateX(-90px) translateY(10px);
   }
 }
