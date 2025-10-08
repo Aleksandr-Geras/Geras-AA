@@ -61,14 +61,6 @@
   height: 100%;
   width: 100%;
 }
-/* .image-slider__slide {
-  width: 240px;
-  height: 72px;
-  margin-bottom: 16px;
-  display: flex;
-  overflow: auto;
-  justify-content: space-between;
-} */
 
 .slide {
   width: 240px;
@@ -110,7 +102,6 @@
   margin-right: 16px;
 }
 
-
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -149,22 +140,8 @@
   font-size: 16px;
 }
 
-/* .slide_third {
-  width: 260px;
-  height: 200px;
-  display: flex;
-  justify-content: space-between;
-} */
-
 .service-container {
   max-width: 1056px;
-  // overflow: hidden;
-  // background-color: red;
-  // margin: 0 auto;
-  // padding: 0 15px;
-  //  display: flex;
-  //  flex-wrap: wrap;
-  // justify-content: space-between;
 }
 .services-wrapper {
   background-color: $white;
@@ -224,16 +201,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  // height: 100%;
   padding: 0;
 }
 .service-name {
-  // background-color: $white;
   min-width: 348px;
   margin-left: 24px;
   z-index: 5;
   flex: 1;
-  // margin-left: -120px;
 }
 .service-name li {
   font-family: 'MyFont', sans-serif;
@@ -244,7 +218,6 @@
 }
 .service-name li:first-child {
   color: $grey;
-  // background-color: $bodyWhite;
   padding-bottom: 16px;
   padding-left: 24px;
   margin-left: -24px;
@@ -252,8 +225,6 @@
 }
 .service-price {
   min-width: 74px;
-  // margin-left: 122px;
-  // background-color: $white;
   z-index: 5;
   flex: 1;
   padding: 0 45px 0 75px;
@@ -264,40 +235,32 @@
   padding-top: 23px;
   font-size: 14px;
   line-height: 18px;
-  // padding-left: 122px;
 }
 .service-price li:first-child {
   color: $grey;
-  // background-color: $bodyWhite;
   padding-bottom: 16px;
 }
 .service-time {
   min-width: 81px;
-  // background-color: $white;
   z-index: 5;
   flex: 1;
 }
 .service-time li {
-  // display: flex;
   margin: 0;
   font-family: 'MyFont', sans-serif;
   padding-bottom: 23px;
   padding-top: 23px;
-  // padding-left: 122px;
-  // padding-right: 24px;
   font-size: 14px;
   line-height: 18px;
 }
 .service-time li:first-child {
   color: $grey;
-  // background-color: $bodyWhite;
   padding-bottom: 16px;
 }
 
 .service-button {
   min-width: 119px;
   height: 324px;
-  // background-color: $white;
   margin-top: 57px;
   z-index: 5;
   flex: 1;
@@ -307,8 +270,6 @@
   font-family: 'MyFont', sans-serif;
   padding-bottom: 9px;
   padding-top: 23px;
-  // padding-left: 111px;
-  // padding-right: 24px;
   font-size: 14px;
   line-height: 18px;
   display: flex;
@@ -317,9 +278,9 @@
 .button-buy {
   background-color: $pinkBtn;
   border-radius: 16px;
+  border: 0px;
   width: 119px;
   height: 32px;
-  //  top: 4px;
   position: relative;
   text-transform: uppercase;
   font-size: 12px;
@@ -332,7 +293,5 @@
   right: 12px;
   padding-left: 12px;
   line-height: 32px;
-  font-family: "MyFont", sans-serif;
+  font-family: 'MyFont', sans-serif;
 }
-
-

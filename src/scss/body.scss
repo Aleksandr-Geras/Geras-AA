@@ -222,24 +222,5 @@ li {
     visibility: visible;
 }
 
-/* Обновите стили для popup-menu */
-#popup-back {
-    position: fixed;
-    z-index: 999; /* Должен быть выше чем у blur-overlay */
-    /* остальные ваши стили */
-}
 
-#popup-call {
-    position: fixed;
-    z-index: 999; /* Должен быть выше чем у blur-overlay */
-    /* остальные ваши стили */
-}
 
-/* Если нужно заблюрить основной контент, но не меню */
-.main {
-    transition: filter 0.3s ease;
-}
-
-.main.blurred {
-    filter: blur(5px);
-}
