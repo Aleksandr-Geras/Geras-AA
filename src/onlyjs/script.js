@@ -10,8 +10,12 @@ const closeCall = document.getElementById('CloseCall');
 const blurOverlay = document.getElementById('blurOverlay'); // Добавляем блюр оверлей
 const body = document.body;
 
-function openMenuWithBlur() {
+function openMenuChatWithBlur() {
     popupMenu.classList.add('active');
+    blurOverlay.classList.add('active');
+    body.style.overflow = 'hidden'; // Блокируем прокрутку
+}
+function openMenuCallWithBlur() {
     popupCall.classList.add('active');
     blurOverlay.classList.add('active');
     body.style.overflow = 'hidden'; // Блокируем прокрутку
@@ -29,7 +33,7 @@ buttons.forEach((button) => {
         if (popupMenu.classList.contains('active')) {
             closeMenuWithBlur();
         } else {
-            openMenuWithBlur();
+            openMenuChatWithBlur();
         }
     });
 });
@@ -38,7 +42,7 @@ callBtn.forEach((button) => {
         if (popupCall.classList.contains('active')) {
             closeMenuWithBlur();
         } else {
-            openMenuWithBlur();
+            openMenuCallWithBlur();
         }
     });
 });
