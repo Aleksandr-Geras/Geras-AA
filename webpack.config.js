@@ -1,4 +1,6 @@
+
 /*global require, module, __dirname,  */
+/*
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -6,29 +8,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   //входной файл
-/*   entry: {
-    main: ['@babel/polyfill', './src/index.js'],
-  },
- */
-
-// webpack.config.js
   entry: {
-    main: ['./src/index.js']
+    main: ['@babel/polyfill', './src/index.js'],
   },
 
   //выходной файл
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    /* publicPath: process.env.NODE_ENV === 'production'
+    // eslint-disable-next-line no-undef
+    publicPath: process.env.NODE_ENV === 'production'
     ? '/maket-1.6/'  // Для GitHub Pages
-    : '/',           // Для локального сервера */
-    publicPath: '/'
+    : '/',           // Для локального сервера
   },
-
-
-
-
 
   devServer: {
     port: 4200,
@@ -109,11 +101,11 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', {
-                targets: 'defaults',
+              '@babel/preset-env',
+              {
                 useBuiltIns: 'entry',
-                corejs: 3
-              }]
+                corejs: '3.22',
+              },
             ],
           },
         },
@@ -149,3 +141,147 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
 };
+ */
+
+
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+// eslint-disable-next-line no-unused-vars
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
+module.exports = {
+  // eslint-disable-next-line no-undef
+  mode: process.env.NODE_ENV || 'development',
+
+  entry: {
+    main: ['./src/index.js']
+  },
+
+  output: {
+    // eslint-disable-next-line no-undef
+    filename: process.env.NODE_ENV === 'production' ? '[name].[contenthash].js' : 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    clean: true // Вместо CleanWebpackPlugin для Webpack 5+
+  },
+
+  devServer: {
+    port: 4200,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    historyApiFallback: true,
+    hot: true,
+    open: true,
+  },
+
+  // eslint-disable-next-line no-undef
+  devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval-source-map',
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+              esModule: false,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: [path.resolve(__dirname, 'src/scss')],
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext][query]',
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext][query]',
+        },
+      },
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src/js'),
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', {
+                targets: 'defaults',
+                useBuiltIns: 'entry',
+                corejs: 3
+              }]
+            ],
+          },
+        },
+      },
+    ],
+  },
+
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: './src/index.html',
+      inject: true,
+      // eslint-disable-next-line no-undef
+      minify: process.env.NODE_ENV === 'production' ? {
+        collapseWhitespace: true,
+        removeComments: true,
+      } : false,
+    }),
+
+    new MiniCssExtractPlugin({
+      // eslint-disable-next-line no-undef
+      filename: process.env.NODE_ENV === 'production' ? '[name].[contenthash].css' : '[name].css',
+    }),
+
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './src/img',
+          to: 'img',
+          noErrorOnMissing: true,
+        },
+        {
+          from: 'src/.nojekyll',
+          to: '.',
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
+
+    // Если используете Webpack 4, оставьте CleanWebpackPlugin
+    // new CleanWebpackPlugin(),
+  ],
+};
+
