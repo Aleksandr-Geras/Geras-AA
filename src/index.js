@@ -1,3 +1,7 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
+
 import './onlyjs/script.js';
 import './onlyjs/swiper.js';
 import './scss/style.scss';

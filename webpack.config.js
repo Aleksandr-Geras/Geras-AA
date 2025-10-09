@@ -6,19 +6,29 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   //входной файл
-  entry: {
+/*   entry: {
     main: ['@babel/polyfill', './src/index.js'],
+  },
+ */
+
+// webpack.config.js
+  entry: {
+    main: ['./src/index.js']
   },
 
   //выходной файл
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    // eslint-disable-next-line no-undef
-    publicPath: process.env.NODE_ENV === 'production'
+    /* publicPath: process.env.NODE_ENV === 'production'
     ? '/maket-1.6/'  // Для GitHub Pages
-    : '/',           // Для локального сервера
+    : '/',           // Для локального сервера */
+    publicPath: '/'
   },
+
+
+
+
 
   devServer: {
     port: 4200,
@@ -99,11 +109,11 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              '@babel/preset-env',
-              {
+              ['@babel/preset-env', {
+                targets: 'defaults',
                 useBuiltIns: 'entry',
-                corejs: '3.22',
-              },
+                corejs: 3
+              }]
             ],
           },
         },
