@@ -38,7 +38,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          PUBLIC_URL: '/maket-1.6'
+          PUBLIC_URL: '/Geras-AA'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

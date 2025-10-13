@@ -7,14 +7,14 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   //входной файл
   entry: {
-    main: ['@babel/polyfill', './src/index.js'],
+    main: ['./src/index.js'],
   },
 
   //выходной файл
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/Geras-AA/maket-1.6/',
+    publicPath: '/Geras-AA/',
     /* // eslint-disable-next-line no-undef
     publicPath: process.env.NODE_ENV === 'production'
     ? 'Geras-AA/maket-1.6/'  // Для GitHub Pages
