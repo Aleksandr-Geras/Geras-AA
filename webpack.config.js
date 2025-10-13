@@ -13,7 +13,7 @@ module.exports = {
   //выходной файл
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'root'),
+    path: path.resolve(__dirname, 'dist'),
     // eslint-disable-next-line no-undef
     publicPath: process.env.NODE_ENV === 'production'
     ? '/maket-1.6/'  // Для GitHub Pages
@@ -23,7 +23,7 @@ module.exports = {
   devServer: {
     port: 4200,
     static: {
-    directory: path.join(__dirname, 'root'), // Указываем правильную папку
+    directory: path.join(__dirname, 'dist'), // Указываем правильную папку
   },
     historyApiFallback: true,
     devMiddleware: {
