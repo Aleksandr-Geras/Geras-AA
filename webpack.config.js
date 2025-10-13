@@ -6,9 +6,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
+// eslint-disable-next-line no-undef
+mode: process.env.NODE_ENV || 'development',
+
   //входной файл
   entry: {
-    main: ['@babel/polyfill', './src/index.js'],
+    main: ['./src/index.js'],
   },
 
   //выходной файл
@@ -26,9 +29,8 @@ module.exports = {
     static: {
     directory: path.join(__dirname, 'dist'), // Указываем правильную папку
   },
-    historyApiFallback: true,
-    devMiddleware: {
-      writeToDisk: true,
+    historyApiFallback: {
+      index: '/index.html' // Важно для SPA
     },
     hot: true,
   },
