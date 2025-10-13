@@ -1,4 +1,3 @@
-
 /*global require, module, __dirname,  */
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -6,21 +5,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
-  // eslint-disable-next-line no-undef
-mode: process.env.NODE_ENV || 'development',
   //входной файл
   entry: {
-    main: [ './src/index.js'],
+    main: ['@babel/polyfill', './src/index.js'],
   },
 
   //выходной файл
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    // eslint-disable-next-line no-undef
+    publicPath: '/Geras-AA/maket-1.6/',
+    /* // eslint-disable-next-line no-undef
     publicPath: process.env.NODE_ENV === 'production'
-    ? '/maket-1.6/'  // Для GitHub Pages
-    : '/',           // Для локального сервера
+    ? 'Geras-AA/maket-1.6/'  // Для GitHub Pages
+    : '/',           // Для локального сервера */
   },
 
   devServer: {
@@ -82,7 +80,7 @@ mode: process.env.NODE_ENV || 'development',
         test: /\.(png|jpe?g|gif|svg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name][ext][query]',
+          filename: 'img/[name][ext]',
         },
       },
       //подключение шрифтов
@@ -142,4 +140,3 @@ mode: process.env.NODE_ENV || 'development',
     new CleanWebpackPlugin(),
   ],
 };
-
