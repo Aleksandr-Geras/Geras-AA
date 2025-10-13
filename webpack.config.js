@@ -6,12 +6,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
-// eslint-disable-next-line no-undef
+  // eslint-disable-next-line no-undef
 mode: process.env.NODE_ENV || 'development',
-
   //входной файл
   entry: {
-    main: ['./src/index.js'],
+    main: [ './src/index.js'],
   },
 
   //выходной файл
@@ -29,8 +28,9 @@ mode: process.env.NODE_ENV || 'development',
     static: {
     directory: path.join(__dirname, 'dist'), // Указываем правильную папку
   },
-    historyApiFallback: {
-      index: '/index.html' // Важно для SPA
+    historyApiFallback: true,
+    devMiddleware: {
+      writeToDisk: true,
     },
     hot: true,
   },
