@@ -30,7 +30,7 @@
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
   },
-  "name": "maket-1.6",
+  "name": "geras-aa",
   "version": "1.0.0",
   "description": "webpack",
   "main": "index.js",
@@ -63,7 +63,7 @@
   "bugs": {
     "url": "https://github.com/Aleksandr-Geras/Geras-AA/issues"
   },
-  "homepage": "https://yourusername.github.io/maket-1.6",
+  "homepage": "https://yourusername.github.io/Geras-AA",
   "dependencies": {
     "core-js": "^3.45.1",
     "swiper": "^11.2.8"
