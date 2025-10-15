@@ -81,6 +81,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]',
+          publicPath: '/Geras-AA/'
         },
       },
       //подключение шрифтов
@@ -89,6 +90,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: '[path][name][ext]',
+          publicPath: '/Geras-AA/'
         },
       },
       //Подключение Babel
