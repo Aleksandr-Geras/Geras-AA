@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: './js/bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/Geras-AA/',
+    publicPath: '/Geras-AA/maket-1.6',
     /* // eslint-disable-next-line no-undef
     publicPath: process.env.NODE_ENV === 'production'
     ? 'Geras-AA/maket-1.6/'  // Для GitHub Pages
@@ -81,7 +81,6 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]',
-          publicPath: '/Geras-AA/'
         },
       },
       //подключение шрифтов
@@ -90,7 +89,6 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: '[path][name][ext]',
-          publicPath: '/Geras-AA/'
         },
       },
       //Подключение Babel
