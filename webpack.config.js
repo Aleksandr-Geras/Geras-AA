@@ -12,9 +12,9 @@ module.exports = {
 
   //выходной файл
   output: {
-    filename: 'bundle.js',
+    filename: './js/bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/Geras-AA/maket-1.6',
+    publicPath: '/Geras-AA/',
     /* // eslint-disable-next-line no-undef
     publicPath: process.env.NODE_ENV === 'production'
     ? 'Geras-AA/maket-1.6/'  // Для GitHub Pages
