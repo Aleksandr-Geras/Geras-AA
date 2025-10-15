@@ -99,12 +99,12 @@ function showMoreSecond() {
     containerBrands.style.height = '';
     btnTxt.innerHTML = 'Скрыть';
 
-    btnTxt.style.backgroundImage = 'url(../img/arrows/icon.svg)';
+    btnTxt.style.backgroundImage = 'url(./src/img/arrows/icon.svg)';
     btnTxt.style.backgroundPosition = '15%, 35%';
   } else {
     containerBrands.style.height = '170px';
     btnTxt.innerHTML = 'Показать все';
-    btnTxt.style.backgroundImage = 'url(../img/arrows/expand.svg)';
+    btnTxt.style.backgroundImage = 'url(./src/img/arrows/expand.svg)';
     btnTxt.style.backgroundPosition = '-5%, 40%';
   }
 }
