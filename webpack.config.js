@@ -12,7 +12,7 @@ module.exports = {
 
   //выходной файл
   output: {
-    filename: './js/bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/Geras-AA/maket-1.6',
     /* // eslint-disable-next-line no-undef
